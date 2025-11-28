@@ -1,5 +1,18 @@
 /* Main shared styles for all pages */
-body, footer {
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #fffaf0;
+}
+
+.main-content {
+    flex: 1 0 auto;
+}
+
+footer {
+    flex-shrink: 0;
     background-color: #fffaf0;
 }
 
