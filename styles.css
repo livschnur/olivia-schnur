@@ -2,3 +2,8 @@
 body, footer {
     background-color: #fffaf0;
 }
+
+/* Set all font colors to black */
+body, footer, h1, h2, h3, p, a, span, li, label, .tagline, .intro-text, .info-value {
+    color: #000000 !important;
+}
