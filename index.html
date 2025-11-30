@@ -95,6 +95,40 @@
             color: #7f8c8d;
             margin-top: 3rem;
         }
+        /* Twitter Feed Section Styles */
+        .twitter-feed-section {
+            margin-top: 3rem;
+            text-align: center;
+        }
+        .twitter-section-title {
+            font-size: 1.8rem;
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+        .twitter-feed-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            padding: 1.5rem;
+            max-width: 548px; /* 500px widget width + 48px padding (1.5rem * 2) */
+            margin: 0 auto;
+        }
+        .twitter-feed-container .twitter-timeline {
+            border-radius: 8px;
+        }
+        @media (max-width: 600px) {
+            .twitter-feed-container {
+                padding: 1rem;
+                max-width: 100%;
+            }
+            .twitter-section-title {
+                font-size: 1.5rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -115,18 +149,24 @@
             </div>
         </div>
 
-        <!-- Twitter Feed Embed -->
-        <div style="display: flex; justify-content: center; margin-top: 2rem;">
-            <a class="twitter-timeline"
-               data-theme="light"
-               data-width="400"
-               data-height="600"
-               href="https://twitter.com/oliviaschnur331">
-               Tweets by @oliviaschnur331
-            </a>
-        </div>
+        <!-- Twitter Feed Section -->
+        <section class="twitter-feed-section">
+            <h2 class="twitter-section-title">Follow Me on Twitter</h2>
+            <div class="twitter-feed-container">
+                <!-- data-chrome options: noheader (hides header), nofooter (hides footer), 
+                     noborders (removes borders), transparent (transparent background) -->
+                <a class="twitter-timeline"
+                   data-theme="light"
+                   data-width="500"
+                   data-height="600"
+                   data-chrome="noheader nofooter noborders transparent"
+                   href="https://twitter.com/oliviaschnur331">
+                   Tweets by @oliviaschnur331
+                </a>
+            </div>
+        </section>
         <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-        <!-- End Twitter Feed Embed -->
+        <!-- End Twitter Feed Section -->
 
     </div>
     </main>
