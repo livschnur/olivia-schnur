@@ -149,24 +149,32 @@
             </div>
         </div>
 
-        <!-- Twitter Feed Section -->
+        <!-- Twitter/X Feed Section - Interactive Widget -->
         <section class="twitter-feed-section">
-            <h2 class="twitter-section-title">Follow Me on Twitter</h2>
+            <h2 class="twitter-section-title">Follow Me on X</h2>
             <div class="twitter-feed-container">
-                <!-- data-chrome options: noheader (hides header), nofooter (hides footer), 
-                     noborders (removes borders), transparent (transparent background) -->
+                <!-- Interactive Twitter/X Timeline Widget
+                     This widget allows users to:
+                     - Scroll through tweets
+                     - Like, retweet, and reply to tweets
+                     - Follow the account directly from the widget
+                     - Click to view full tweets on X
+                     - View embedded media and links -->
                 <a class="twitter-timeline"
                    data-theme="light"
                    data-width="500"
                    data-height="600"
-                   data-chrome="noheader nofooter noborders transparent"
+                   data-chrome="transparent"
+                   data-tweet-limit="5"
+                   data-show-replies="false"
+                   data-dnt="true"
                    href="https://twitter.com/oliviaschnur331">
-                   Tweets by @oliviaschnur331
+                   Posts by @oliviaschnur331
                 </a>
             </div>
         </section>
         <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-        <!-- End Twitter Feed Section -->
+        <!-- End Twitter/X Feed Section -->
 
     </div>
     </main>
