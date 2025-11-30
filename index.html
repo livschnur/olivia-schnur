@@ -114,7 +114,7 @@
             border-radius: 12px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
             padding: 1.5rem;
-            max-width: 550px;
+            max-width: 548px; /* 500px widget width + 48px padding (1.5rem * 2) */
             margin: 0 auto;
         }
         .twitter-feed-container .twitter-timeline {
@@ -153,6 +153,8 @@
         <section class="twitter-feed-section">
             <h2 class="twitter-section-title">Follow Me on Twitter</h2>
             <div class="twitter-feed-container">
+                <!-- data-chrome options: noheader (hides header), nofooter (hides footer), 
+                     noborders (removes borders), transparent (transparent background) -->
                 <a class="twitter-timeline"
                    data-theme="light"
                    data-width="500"
