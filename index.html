@@ -109,15 +109,21 @@
         .twitter-feed-container {
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: flex-start;
             background-color: #fff;
             border-radius: 12px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            padding: 1.5rem;
-            max-width: 548px; /* 500px widget width + 48px padding (1.5rem * 2) */
+            padding: 1rem;
+            max-width: 520px; /* 500px widget width + 20px padding (1rem * 2) */
             margin: 0 auto;
+            overflow: hidden;
         }
         .twitter-feed-container .twitter-timeline {
+            border-radius: 8px;
+            width: 100%;
+        }
+        /* Style the Twitter widget iframe for better scrolling appearance */
+        .twitter-feed-container .twitter-timeline iframe {
             border-radius: 8px;
         }
         @media (max-width: 600px) {
@@ -154,18 +160,18 @@
             <h2 class="twitter-section-title">Follow Me on X</h2>
             <div class="twitter-feed-container">
                 <!-- Interactive Twitter/X Timeline Widget
-                     This widget allows users to:
-                     - Scroll through tweets
+                     This widget is scrollable and allows users to:
+                     - Scroll through all tweets in the timeline
                      - Like, retweet, and reply to tweets
                      - Follow the account directly from the widget
                      - Click to view full tweets on X
-                     - View embedded media and links -->
+                     - View embedded media and links
+                     Note: Removed data-tweet-limit to enable infinite scrolling -->
                 <a class="twitter-timeline"
                    data-theme="light"
                    data-width="500"
                    data-height="600"
-                   data-chrome="transparent"
-                   data-tweet-limit="5"
+                   data-chrome="noheader nofooter noborders transparent"
                    data-show-replies="false"
                    data-dnt="true"
                    href="https://twitter.com/oliviaschnur331">
