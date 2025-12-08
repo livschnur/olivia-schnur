@@ -26,16 +26,25 @@
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 3rem 2rem;
+            padding: 0 2rem;
+            height: calc(100vh - 8rem);
+            display: flex;
+            flex-direction: column;
         }
         .experience-layout {
             display: flex;
             gap: 2rem;
-            align-items: flex-start;
+            align-items: stretch;
+            padding: 1.5rem 0;
+            flex: 1;
+            min-height: 0;
         }
         .left-column {
             flex: 1;
             min-width: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 0;
         }
         .right-column {
             flex: 1;
@@ -43,11 +52,13 @@
             flex-direction: column;
             gap: 1.5rem;
             min-width: 0;
+            min-height: 0;
         }
         h1 {
             font-size: 2.5rem;
             color: #2c3e50;
-            margin-bottom: 2rem;
+            margin-bottom: 1rem;
+            margin-top: 1rem;
             text-align: center;
         }
         @media (max-width: 768px) {
@@ -62,24 +73,31 @@
         }
         .about-content {
             background-color: #ede5d5;
-            padding: 2rem;
+            padding: 1.15rem;
             border-radius: 8px;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
             height: 100%;
+            overflow-y: hidden;
+            display: flex;
+            flex-direction: column;
         }
         .professional-summary {
             background-color: #ede5d5;
-            padding: 2rem;
+            padding: 1.15rem;
             border-radius: 8px;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
             flex: 2;
+            overflow-y: hidden;
+            min-height: 0;
         }
         .skills-section-new {
             background-color: #ede5d5;
-            padding: 2rem;
+            padding: 1.15rem;
             border-radius: 8px;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
             flex: 1;
+            overflow-y: hidden;
+            min-height: 0;
         }
         @media (max-width: 768px) {
             .about-content,
@@ -97,13 +115,17 @@
         }
         .about-content h2 {
             color: #2c3e50;
-            margin-bottom: 1rem;
-            font-size: 1.5rem;
+            margin-bottom: 0.35rem;
+            font-size: 1rem;
             text-align: center;
         }
         .about-content p {
-            margin-bottom: 1.5rem;
-            font-size: 1.1rem;
+            margin-bottom: 0.4rem;
+            font-size: 0.6rem;
+            line-height: 1.25;
+        }
+        .about-content p:last-child {
+            margin-bottom: 0;
         }
         @media (max-width: 768px) {
             .about-content p {
@@ -113,12 +135,13 @@
         .professional-summary h2,
         .skills-section-new h2 {
             color: #2c3e50;
-            margin-bottom: 1rem;
-            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
         }
         .professional-summary p {
-            margin-bottom: 0.75rem;
-            font-size: 1.05rem;
+            margin-bottom: 0.4rem;
+            font-size: 0.7rem;
+            line-height: 1.3;
         }
         .skills-list {
             display: flex;
@@ -130,9 +153,9 @@
         .skills-list li {
             background-color: #fffaf0;
             color: #2c3e50;
-            padding: 0.5rem 1rem;
+            padding: 0.3rem 0.6rem;
             border-radius: 20px;
-            font-size: 0.9rem;
+            font-size: 0.65rem;
             border: 1px solid #2c3e50;
         }
         footer {
@@ -185,8 +208,8 @@
             <div class="left-column">
                 <div class="about-content">
             <h2>Professional Experience</h2>
-            <p><strong>Showrunner – WTBU<br>Boston, MA<br>
-            2024 – Present</strong></p>
+            <p><strong>Showrunner – WTBU</strong><br>Boston, MA<br>
+            2024 – Present</p>
 
             <p>I am the co-host of "The Basement," which promotes and platforms musicians in the local Boston music scene. I lead and conduct live sessions that spotlight local and touring artists, during which I set up and record 30-minute live-mixed sets, conduct a 45-minute in-depth interview, and feature any other media the musicians would like to promote. I also manage the Instagram profile, conduct outreach to local musicians, and develop art direction and branding. The Instagram account has seen a 277% increase in followers with about 92,000 profile views in the last 90 days.</p>
 
@@ -209,19 +232,24 @@
             <div class="right-column">
                 <div class="professional-summary">
                     <h2>Professional Summary</h2>
-                    <p>Passionate music industry professional with expertise in A&R, talent management, and artist development. Experienced in leveraging social media and branding to amplify artist visibility and engagement. Proven track record in scouting talent, managing booking logistics, and coordinating with industry stakeholders to support emerging and established artists.</p>
+                    <p>I am a 21-year-old senior at Boston University majoring in advertising and minoring in business administration. During my undergrad, I interned at music-focused companies in Boston and Los Angeles and have held various roles in college radio.
+
+I collect any information I can about intellectual property law, artist branding, and audio mixing. My radio show, The Basement, has more followers than any other BU radio show. Our tailored programming has led us to receive promotional inquiries from record labels on behalf of signed artists. 
+
+My time at Boston University and experience in band management, show booking, artist scouting, and Artist & Repertoire administration have led me to pursue a career in A&R.
+.</p>
                 </div>
                 
                 <div class="skills-section-new">
                     <h2>Skills</h2>
                     <ul class="skills-list">
-                        <li>A&R</li>
-                        <li>Talent Scouting</li>
+                        <li>A&R Scouting</li>
+                        <li>BMI Songview</li>
                         <li>Artist Management</li>
                         <li>Booking</li>
                         <li>Social Media</li>
-                        <li>Branding</li>
-                        <li>Audio Recording</li>
+                        <li>Artist Branding</li>
+                        <li>Adobe Creative Cloud</li>
                         <li>Music Production</li>
                     </ul>
                 </div>
