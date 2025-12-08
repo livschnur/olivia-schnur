@@ -52,7 +52,7 @@
             background-position: center;
             background-size: auto;
             opacity: 0.8;
-            transform: translate(-50%, -50%) scale(1.5) rotate(100deg);
+            transform: translate(-50%, -50%) scale(1.5) scaleY(-1) rotate(100deg);
             z-index: -1;
             pointer-events: none;
         }
@@ -84,6 +84,8 @@
             padding-top: 0.5rem;
             width: 80px;
             flex-shrink: 0;
+            position: relative;
+            z-index: 1;
         }
 
         .vertical-name span {
@@ -108,6 +110,8 @@
             flex-direction: column;
             margin-left: 1rem;
             margin-right: 1rem;
+            position: relative;
+            z-index: 1;
         }
 
         .hero {
@@ -219,6 +223,8 @@
             padding: 0.5rem;
             flex-shrink: 0;
             background-color: #fffaf0;
+            position: relative;
+            z-index: 1;
         }
 
         .tagline {
