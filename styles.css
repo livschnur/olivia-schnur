@@ -7,7 +7,7 @@ body {
 }
 
 .site-nav {
-    background-color: #fffaf0;
+    background-color: transparent;
     padding: clamp(0.75rem, 1.5vw, 1.25rem) 2rem;
     display: flex;
     justify-content: center;
@@ -70,7 +70,7 @@ body {
 
 footer {
     flex-shrink: 0;
-    background-color: #fffaf0;
+    background-color: transparent;
 }
 
 body, footer, h1, h2, h3, p, a, li, label, .tagline, .intro-text, .info-value {
