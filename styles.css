@@ -7,7 +7,7 @@ body {
 }
 
 .site-nav {
-    background-color: #fffaf0;
+    background-color: transparent;
     padding: clamp(0.75rem, 1.5vw, 1.25rem) 2rem;
     display: flex;
     justify-content: center;
@@ -37,16 +37,10 @@ body {
 .home-layout .site-nav-list {
     position: relative;
     width: 100%;
-    padding: 0 calc(80px + 1in);
+    padding: 0 2rem;
 }
 
 /* Responsive adjustments for smaller screens */
-@media (max-width: 1024px) {
-    .home-layout .site-nav-list {
-        padding: 0 calc(60px + 0.75in);
-    }
-}
-
 @media (max-width: 768px) {
     .site-nav-list {
         justify-content: center;
@@ -72,7 +66,7 @@ body {
 
 footer {
     flex-shrink: 0;
-    background-color: #fffaf0;
+    background-color: transparent;
 }
 
 body, footer, h1, h2, h3, p, a, li, label, .tagline, .intro-text, .info-value {
