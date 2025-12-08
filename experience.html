@@ -99,15 +99,15 @@
         }
         .profile-photo-section {
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
             align-items: center;
-            gap: 0.75rem;
+            gap: 1rem;
             margin-bottom: 0.5rem;
         }
         
         .profile-photo-small {
-            width: 80px;
-            height: 80px;
+            width: 120px;
+            height: 120px;
             border-radius: 50%;
             object-fit: cover;
             box-shadow: 0 2px 8px rgba(0,0,0,0.15);
@@ -128,6 +128,12 @@
         
         .download-bio-btn:hover {
             background-color: #f0f0f0;
+        }
+        
+        @media (max-width: 768px) {
+            .profile-photo-section {
+                flex-direction: column;
+            }
         }
         
         .skills-section-new {
