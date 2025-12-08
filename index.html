@@ -94,6 +94,61 @@
             display: flex;
             flex-direction: column;
         }
+        .hero {
+            display: flex;
+            gap: 2rem;
+            align-items: flex-start;
+            flex-wrap: wrap;
+        }
+        .hero-left {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+        .profile-photo {
+            width: clamp(220px, 24vw, 320px);
+            height: auto;
+            border-radius: 12px;
+            object-fit: cover;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+        }
+        .side-nav {
+            background-color: #fffaf0;
+            padding: 0.75rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            width: clamp(220px, 24vw, 320px);
+        }
+        .side-nav nav {
+            background-color: transparent;
+            padding: 0;
+        }
+        .side-nav ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            gap: 0.5rem;
+        }
+        .side-nav a {
+            display: block;
+            padding: 0.65rem 1rem;
+            text-align: center;
+            border-radius: 6px;
+            border: 1px solid #000000;
+            background-color: #ffffff;
+        }
+        .side-nav a:hover {
+            background-color: #f0f0f0;
+        }
+        .hero-content {
+            flex: 1;
+            min-width: 260px;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
         header {
             text-align: left;
             margin-bottom: 1rem;
@@ -202,15 +257,6 @@
     </style>
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="experience.html">Experience</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
-
     <main class="main-content">
         <div class="home-layout">
             <div class="vertical-name left">
@@ -222,41 +268,56 @@
                 <span>a</span>
             </div>
             <div class="container">
-                <header>
-                    <p class="tagline">Aspiring Music Business Professional &amp; Student</p>
-                </header>
-                <div class="cta-links">
-                    <a href="experience.html">View Experience</a>
-                    <a href="portfolio.html">View My Work</a>
-                    <a href="contact.html">Get In Touch</a>
-                </div>
+                <section class="hero">
+                    <div class="hero-left">
+                        <img src="picture of me.jpeg" alt="Portrait of Olivia Schnur" class="profile-photo">
+                        <nav class="side-nav">
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="experience.html">Experience</a></li>
+                                <li><a href="portfolio.html">Portfolio</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="hero-content">
+                        <header>
+                            <p class="tagline">Aspiring Music Business Professional &amp; Student</p>
+                        </header>
+                        <div class="cta-links">
+                            <a href="experience.html">View Experience</a>
+                            <a href="portfolio.html">View My Work</a>
+                            <a href="contact.html">Get In Touch</a>
+                        </div>
 
-                <!-- Twitter/X Feed Section - Interactive Widget -->
-                <section class="twitter-feed-section">
-                    <h2 class="twitter-section-title">Follow Me on X</h2>
-                    <div class="twitter-feed-container">
-                        <!-- Interactive Twitter/X Timeline Widget
-                             This widget is scrollable and allows users to:
-                             - Scroll through all tweets in the timeline
-                             - Like, retweet, and reply to tweets
-                             - Follow the account directly from the widget
-                             - Click to view full tweets on X
-                             - View embedded media and links
-                             Note: Removed data-tweet-limit to enable infinite scrolling -->
-                        <a class="twitter-timeline"
-                           data-theme="light"
-                           data-width="500"
-                           data-height="300"
-                           data-chrome="noheader nofooter noborders transparent"
-                           data-show-replies="false"
-                           data-dnt="true"
-                           href="https://twitter.com/oliviaschnur331">
-                           Posts by @oliviaschnur331
-                        </a>
+                        <!-- Twitter/X Feed Section - Interactive Widget -->
+                        <section class="twitter-feed-section">
+                            <h2 class="twitter-section-title">Follow Me on X</h2>
+                            <div class="twitter-feed-container">
+                                <!-- Interactive Twitter/X Timeline Widget
+                                     This widget is scrollable and allows users to:
+                                     - Scroll through all tweets in the timeline
+                                     - Like, retweet, and reply to tweets
+                                     - Follow the account directly from the widget
+                                     - Click to view full tweets on X
+                                     - View embedded media and links
+                                     Note: Removed data-tweet-limit to enable infinite scrolling -->
+                                <a class="twitter-timeline"
+                                   data-theme="light"
+                                   data-width="500"
+                                   data-height="300"
+                                   data-chrome="noheader nofooter noborders transparent"
+                                   data-show-replies="false"
+                                   data-dnt="true"
+                                   href="https://twitter.com/oliviaschnur331">
+                                   Posts by @oliviaschnur331
+                                </a>
+                            </div>
+                        </section>
+                        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                        <!-- End Twitter/X Feed Section -->
                     </div>
                 </section>
-                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-                <!-- End Twitter/X Feed Section -->
 
             </div>
             <div class="vertical-name right">
