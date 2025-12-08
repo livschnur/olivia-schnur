@@ -19,17 +19,60 @@ body {
     list-style: none;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     gap: clamp(1.25rem, 2vw, 2.75rem);
     margin: 0;
     padding: 0;
-    width: min(1100px, 100%);
+    width: 100%;
+    max-width: 1100px;
+}
+
+/* Special positioning for home page with vertical text */
+.home-layout .site-nav {
+    position: relative;
+}
+
+.home-layout .site-nav-list {
+    position: relative;
+    width: 100%;
+}
+
+.home-layout .site-nav-list li:first-child {
+    position: absolute;
+    left: calc(80px + 1in);
+}
+
+.home-layout .site-nav-list li:last-child {
+    position: absolute;
+    right: calc(80px + 1in);
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 1024px) {
+    .home-layout .site-nav-list li:first-child {
+        left: calc(60px + 0.75in);
+    }
+    
+    .home-layout .site-nav-list li:last-child {
+        right: calc(60px + 0.75in);
+    }
+}
+
+@media (max-width: 768px) {
+    .home-layout .site-nav-list {
+        justify-content: center;
+    }
+    
+    .home-layout .site-nav-list li:first-child,
+    .home-layout .site-nav-list li:last-child {
+        position: static;
+    }
 }
 
 .site-nav a {
     color: #2c3e50;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: normal;
     font-size: clamp(1rem, 1vw + 0.85rem, 1.15rem);
     transition: color 0.3s ease;
 }
