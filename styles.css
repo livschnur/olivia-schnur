@@ -35,16 +35,10 @@ body {
 .home-layout .site-nav-list {
     position: relative;
     width: 100%;
-    padding: 0 calc(80px + 1in);
+    padding: 0 2rem;
 }
 
 /* Responsive adjustments for smaller screens */
-@media (max-width: 1024px) {
-    .home-layout .site-nav-list {
-        padding: 0 calc(60px + 0.75in);
-    }
-}
-
 @media (max-width: 768px) {
     .site-nav-list {
         justify-content: center;
