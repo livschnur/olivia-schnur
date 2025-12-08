@@ -144,11 +144,14 @@
             align-self: stretch;
             width: clamp(242px, 35vw, 352px);
         }
-        
+
+        /* IMAGE: keep original proportions, no cropping, and keep it from getting too tall */
         .profile-photo-wrapper {
             width: clamp(242px, 35vw, 352px);
             max-height: calc(100vh - 180px); /* gently scales with viewport while staying contained */
-        
+            overflow: visible;
+        }
+
         .profile-photo {
             display: block;
             width: 100%;
@@ -158,9 +161,6 @@
             object-fit: contain; /* no cropping */
             border-radius: 0;
             box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
-            transform: scale(1.5);
-            transform-origin: center center; /* keeps the image in place */
-    
         }
 
         .hero-feed {
