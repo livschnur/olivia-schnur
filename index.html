@@ -137,6 +137,35 @@
             align-items: flex-start;
         }
 
+        /* Middle Column: Text Container */
+        .middle-column {
+            display: flex;
+            flex-direction: column;
+            flex: 0 0 auto;
+            width: 300px;
+            padding: 0 1.5rem;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .text-container {
+            background-color: #fffaf0;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.12);
+            border: 1px solid rgba(0,0,0,0.1);
+            width: 100%;
+        }
+
+        .text-container h2 {
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .text-container p {
+            line-height: 1.8;
+        }
+
         /* Right Column: Twitter Feed */
         .right-column {
             display: flex;
@@ -251,6 +280,12 @@
                 max-width: 600px;
             }
 
+            .middle-column {
+                width: 100%;
+                max-width: 600px;
+                padding: 0;
+            }
+
             .right-column {
                 width: 100%;
                 max-width: 520px;
@@ -278,8 +313,16 @@
                 max-width: 360px;
             }
 
+            .middle-column {
+                max-width: 360px;
+            }
+
             .profile-container {
                 padding: 1.5rem 2.5rem;
+            }
+
+            .text-container {
+                padding: 1.5rem;
             }
 
         }
@@ -323,6 +366,13 @@
                                     <a href="contact.html">Get In Touch</a>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+
+                    <div class="middle-column">
+                        <div class="text-container">
+                            <h2>About Me</h2>
+                            <p>Welcome! I'm an aspiring music business professional with a passion for connecting artists with audiences. Explore my experience, portfolio, and feel free to reach out.</p>
                         </div>
                     </div>
 
