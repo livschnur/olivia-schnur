@@ -117,6 +117,7 @@
             flex: 1;
             margin-top: 1.5rem;
             min-height: calc(100vh - 230px);
+            position: relative;
         }
 
         .hero-photo {
@@ -162,6 +163,19 @@
             align-items: stretch;
             justify-content: flex-end;
             align-self: stretch;
+        }
+
+        .ascii-art-overlay {
+            position: absolute;
+            bottom: 0;
+            left: calc(clamp(242px, 35vw, 352px) - 24px);
+            width: clamp(360px, 42vw, 540px);
+            opacity: 0.9;
+            transform: rotate(60deg);
+            transform-origin: center;
+            pointer-events: none;
+            filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.15));
+            z-index: 1;
         }
 
         .cta-links {
@@ -266,6 +280,8 @@
                             </div>
                         </section>
                     </div>
+
+                    <img src="ascii-art-removebg-preview.png" alt="ASCII art decorative accent" class="ascii-art-overlay">
                 </section>
             </div>
 
