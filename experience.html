@@ -89,13 +89,47 @@
         }
         .professional-summary {
             background-color: #ede5d5;
-            padding: 1.15rem;
+            padding: 0.6rem 1rem;
             border-radius: 8px;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
             flex: 2;
             overflow-y: hidden;
             min-height: 0;
+            margin-top: 1rem;
         }
+        .profile-photo-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .profile-photo-small {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        }
+        
+        .download-bio-btn {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background-color: #ffffff;
+            color: #2c3e50;
+            text-decoration: none;
+            border-radius: 5px;
+            border: 1px solid #2c3e50;
+            font-size: 0.75rem;
+            transition: background-color 0.3s ease;
+            text-align: center;
+        }
+        
+        .download-bio-btn:hover {
+            background-color: #f0f0f0;
+        }
+        
         .skills-section-new {
             background-color: #ede5d5;
             padding: 1.15rem;
@@ -151,13 +185,9 @@
         }
 
         .professional-summary p {
-            margin-bottom: 0.4rem;
+            margin-bottom: 0.3rem;
             font-size: 0.7rem;
-            line-height: 1.3;
-        }
-        .professional-summary p {
-            margin-bottom: 0.4rem;
-            font-size: 0.7rem;line-height: 1.3;
+            line-height: 1.25;
         }
 
 
@@ -248,14 +278,18 @@
             </div>
             
             <div class="right-column">
+                <div class="profile-photo-section">
+                    <img src="picture of me.jpeg" alt="Olivia Schnur" class="profile-photo-small">
+                    <a href="#" class="download-bio-btn" onclick="alert('Bio download functionality coming soon!'); return false;">download bio</a>
+                </div>
+                
                 <div class="professional-summary">
                     <h2>Professional Summary</h2>
                     <p>I am a 21-year-old senior at Boston University majoring in advertising and minoring in business administration. During my undergrad, I interned at music-focused companies in Boston and Los Angeles and have held various roles in college radio.
 
 I collect any information I can about intellectual property law, artist branding, and audio mixing. My radio show, The Basement, has more followers than any other BU radio show. Our tailored programming has led us to receive promotional inquiries from record labels on behalf of signed artists. 
 
-My time at Boston University and experience in band management, show booking, artist scouting, and Artist & Repertoire administration have led me to pursue a career in A&R.
-.</p>
+My time at Boston University and experience in band management, show booking, artist scouting, and Artist & Repertoire administration have led me to pursue a career in A&R.</p>
                 </div>
                 
                 <div class="skills-section-new">
