@@ -96,7 +96,7 @@
         }
         .hero {
             display: flex;
-            gap: 2rem;
+            gap: 1.5rem;
             align-items: flex-start;
             flex-wrap: wrap;
         }
@@ -105,13 +105,15 @@
             flex-direction: column;
             align-items: flex-start;
             gap: 1rem;
+            transform: translateX(-12px);
         }
         .profile-photo {
-            width: clamp(260px, 28vw, 380px);
+            width: clamp(300px, 38vw, 560px);
             height: auto;
             border-radius: 0;
             object-fit: cover;
             box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+            max-width: none;
         }
         .hero-content {
             flex: 1;
