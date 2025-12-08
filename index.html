@@ -226,7 +226,7 @@
         }
         /* Twitter Feed Section Styles */
         .twitter-feed-section {
-            margin-top: 1rem;
+            margin-top: 2rem;
             text-align: center;
             flex: 1;
             min-height: 0;
@@ -234,40 +234,41 @@
             flex-direction: column;
         }
         .twitter-section-title {
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             color: #2c3e50;
-            margin-bottom: 0.5rem;
-            font-weight: normal;
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
             flex-shrink: 0;
         }
         .twitter-feed-container {
             display: flex;
             justify-content: center;
-            align-items: flex-start;
-            background-color: #fff;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            padding: 0.5rem;
-            width: 100%;
-            overflow: auto;
+            align-items: stretch;
+            background-color: #f5f8fa;
+            border: 1px solid #e1e8ed;
+            border-radius: 16px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+            padding: 0.75rem;
+            max-width: 480px;
+            margin: 0 auto;
+            overflow: hidden;
             flex: 1;
             min-height: 0;
         }
         .twitter-feed-container .twitter-timeline {
-            border-radius: 8px;
             width: 100%;
         }
-        /* Style the Twitter widget iframe for better scrolling appearance */
         .twitter-feed-container .twitter-timeline iframe {
-            border-radius: 8px;
+            border-radius: 12px;
         }
         @media (max-width: 600px) {
             .twitter-feed-container {
-                padding: 1rem;
+                padding: 0.5rem;
                 max-width: 100%;
             }
             .twitter-section-title {
-                font-size: 1.5rem;
+                font-size: 1.25rem;
             }
         }
     </style>
