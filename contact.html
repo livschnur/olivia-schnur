@@ -41,22 +41,21 @@
             font-size: 1.1rem;
         }
         .contact-wrapper {
-            display: grid;
-            grid-template-columns: minmax(320px, 2fr) minmax(260px, 1.25fr);
+            display: flex;
+            flex-direction: column;
             gap: 2rem;
-            align-items: stretch;
+            align-items: center;
             width: 100%;
-        }
-        @media (max-width: 768px) {
-            .contact-wrapper {
-                grid-template-columns: 1fr;
-            }
         }
         .contact-form, .contact-info {
             background-color: #fff;
-            padding: 2rem;
             border-radius: 8px;
             box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+        }
+        .contact-form {
+            padding: 2rem;
+            width: 100%;
+            max-width: 600px;
         }
         .contact-form h2, .contact-info h2 {
             color: #2c3e50;
@@ -121,6 +120,9 @@
             flex-direction: column;
             gap: 0.5rem;
             justify-content: center;
+            padding: 1rem 2rem;
+            width: 100%;
+            max-width: 500px;
         }
         .contact-info .info-item {
             display: flex;
