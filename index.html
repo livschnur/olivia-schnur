@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>olivia schnur - Home</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- Elfsight Twitter Feed | Untitled Twitter Feed -->
+    <script src="https://elfsightcdn.com/platform.js" async></script>
     <style>
         @font-face {
             font-family: 'LilexNerdFont';
@@ -135,6 +137,22 @@
             align-items: flex-start;
         }
 
+        /* Right Column: Twitter Feed */
+        .right-column {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            align-items: flex-end;
+            justify-content: flex-start;
+            padding-left: 2rem;
+            max-width: 500px;
+        }
+
+        .twitter-feed-container {
+            width: 100%;
+            max-width: 400px;
+        }
+
         /* Profile container with transparent background */
         .profile-container {
             background-color: transparent;
@@ -233,6 +251,13 @@
                 max-width: 600px;
             }
 
+            .right-column {
+                width: 100%;
+                max-width: 520px;
+                align-items: center;
+                padding-left: 0;
+            }
+
             .profile-container {
                 padding: 2rem 3rem;
             }
@@ -301,6 +326,11 @@
                         </div>
                     </div>
 
+                    <div class="right-column">
+                        <div class="twitter-feed-container">
+                            <div class="elfsight-app-480a0948-99e5-4e7f-8657-325ebc806890" data-elfsight-app-lazy></div>
+                        </div>
+                    </div>
 
                 </section>
             </div>
