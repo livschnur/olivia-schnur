@@ -195,6 +195,29 @@
             margin-bottom: 0;
             font-weight: bold;
         }
+        .x-widget {
+            margin-top: 1.75rem;
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+            border: 1px solid #e5e7eb;
+        }
+        .x-widget-header {
+            display: flex;
+            flex-direction: column;
+            gap: 0.35rem;
+            margin-bottom: 0.5rem;
+        }
+        .x-widget-title {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        .x-widget-subtitle {
+            color: #7f8c8d;
+            font-size: 0.95rem;
+        }
     </style>
 </head>
 <body>
@@ -230,6 +253,14 @@
                     </div>
                 </section>
 
+                <section class="x-widget" aria-label="Latest posts on X">
+                    <div class="x-widget-header">
+                        <h2 class="x-widget-title">Latest on X</h2>
+                        <p class="x-widget-subtitle">See what's new from @oliviaschnur331 without leaving the page.</p>
+                    </div>
+                    <a class="twitter-timeline" data-width="100%" data-height="520" data-theme="light" href="https://twitter.com/oliviaschnur331">Tweets by @oliviaschnur331</a>
+                </section>
+
             </div>
             <div class="vertical-name right">
                 <span>s</span>
@@ -245,5 +276,6 @@
     <footer>
         <p class="tagline">Aspiring Music Business Professional &amp; Student</p>
     </footer>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </body>
 </html>
