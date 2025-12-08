@@ -111,20 +111,23 @@
             margin-top: 18vh; /* tweak this number until the top aligns with the 'v' */
         }
        .profile-photo-wrapper {
-            /* Let the image define its own size */
-            max-width: 100%;
-            overflow: visible; /* no cropping */
+    /* Let the wrapper be as big as it needs, but not too huge */
+           max-width: 100%;
+           max-height: 70vh;
+           overflow: visible; /* don’t crop the image */
         }
-     .profile-photo {
+
+        .profile-photo {
             display: block;
-            width: auto;         /* use the image’s intrinsic width */
-            height: auto;        /* use the image’s intrinsic height */
-            max-width: 100%;     /* scale down if it’s wider than the column */
-            max-height: 50vh;    /* prevents it from getting too tall on big screens */
+            width: auto;          /* use original width */
+            height: auto;         /* use original height */
+            max-width: 100%;      /* shrink to fit small screens */
+            max-height: 70vh;     /* don’t get taller than the viewport */
             border-radius: 0;
-            object-fit: contain; /* don’t crop, just fit inside the box */
+            object-fit: contain;  /* respect aspect ratio, no cropping */
             box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
         }
+
         .hero-content {
             flex: 1;
             min-width: 260px;
