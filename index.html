@@ -240,6 +240,26 @@
             margin-top: 1.5rem;
             border-radius: 12px;
         }
+        .x-widget {
+            margin-top: 1.75rem;
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+            border: 1px solid #e5e7eb;
+        }
+
+/* This is the scrollable area */
+.x-feed-scroll {
+    max-height: 350px;   /* adjust this number to taste */
+    overflow-y: auto;
+}
+
+/* Make sure the widget fills the scroll box */
+.elfsight-app-5f816b97-4b31-4c74-876a-51b0d9aa1140 {
+    width: 100%;
+}
+
     </style>
 </head>
 <body>
@@ -274,15 +294,22 @@
                             <a href="portfolio.html">View My Work</a>
                             <a href="contact.html">Get In Touch</a>
                         </div>
-                       
-                           <div class="social-feed-scroll">
-                               <script src="https://elfsightcdn.com/platform.js" async></script>
-                               <div class="elfsight-app-5f816b97-4b31-4c74-876a-51b0d9aa1140" data-elfsight-app-lazy></div>
+                        
+                        <section class="x-widget">
+                            <div class="x-widget-header">
+                                <div class="x-widget-title">Latest on X (Twitter)</div>
+                                <div class="x-widget-subtitle">@livschnur</div>
                             </div>
- <!-- Elfsight Social Feed | Untitled Social Feed -->
+                            
+                            <div class="x-feed-scroll">
+                                <div class="elfsight-app-5f816b97-4b31-4c74-876a-51b0d9aa1140" data-elfsight-app-lazy></div>
+                            </div>
+                        </section>
+                    </div>
+
                     </div>
                 </section>
-
+             <script src="https://elfsightcdn.com/platform.js" async></script>
             </div>
             <div class="vertical-name right">
                 <span>s</span>
@@ -296,7 +323,7 @@
     </main>
 
     <footer>
-        <p class="tagline">Aspiring Music Business Professional &amp; Student</p>
+        <p class="tagline">Student &amp; Aspiring Music Business Professional</p>
     </footer>
 </body>
 </html>
