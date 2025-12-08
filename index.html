@@ -153,9 +153,11 @@
 
         .ascii-art-overlay {
             position: absolute;
-            bottom: 0;
+            bottom: 20%;
             left: 50%;
-            width: clamp(360px, 42vw, 540px);
+            min-width: 120vw;
+            width: 120vw;
+            height: auto;
             opacity: 0.3;
             transform: translateX(-50%) rotate(-60deg);
             transform-origin: center;
