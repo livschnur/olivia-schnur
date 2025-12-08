@@ -40,6 +40,31 @@
             display: flex;
             flex-direction: column;
         }
+        .home-layout {
+            flex: 1;
+            min-height: 0;
+            height: 100%;
+            display: grid;
+            grid-template-columns: 80px 1fr 80px;
+            align-items: stretch;
+            gap: 1rem;
+        }
+        .vertical-name {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: bold;
+            color: #fffaf0;
+            text-align: center;
+            padding-top: 0.5rem;
+        }
+        .vertical-name span {
+            display: block;
+            width: 100%;
+            text-align: center;
+            font-size: 1.2rem;
+        }
         nav {
             background-color: #fffaf0;
             padding: 0.5rem 2rem;
@@ -187,6 +212,14 @@
     </nav>
 
     <main class="main-content">
+        <div class="home-layout">
+            <div class="vertical-name left">
+                <span>o</span>
+                <span>l</span>
+                <span>i</span>
+                <span>v</span>
+                <span>i</span>
+                <span>a</span>
     <div class="container">
         <header>
             <p class="tagline">Aspiring Music Business Professional &amp; Student</p>
@@ -196,36 +229,53 @@
                 <a href="portfolio.html">View My Work</a>
                 <a href="contact.html">Get In Touch</a>
             </div>
-        </div>
+            <div class="container">
+                <header>
+                    <p class="tagline">Aspiring Music Business Professional &amp; Student</p>
+                </header>
+                <div class="cta-links">
+                    <a href="about.html">View Experience</a>
+                    <a href="portfolio.html">View My Work</a>
+                    <a href="contact.html">Get In Touch</a>
+                </div>
 
-        <!-- Twitter/X Feed Section - Interactive Widget -->
-        <section class="twitter-feed-section">
-            <h2 class="twitter-section-title">Follow Me on X</h2>
-            <div class="twitter-feed-container">
-                <!-- Interactive Twitter/X Timeline Widget
-                     This widget is scrollable and allows users to:
-                     - Scroll through all tweets in the timeline
-                     - Like, retweet, and reply to tweets
-                     - Follow the account directly from the widget
-                     - Click to view full tweets on X
-                     - View embedded media and links
-                     Note: Removed data-tweet-limit to enable infinite scrolling -->
-                <a class="twitter-timeline"
-                   data-theme="light"
-                   data-width="500"
-                   data-height="300"
-                   data-chrome="noheader nofooter noborders transparent"
-                   data-show-replies="false"
-                   data-dnt="true"
-                   href="https://twitter.com/oliviaschnur331">
-                   Posts by @oliviaschnur331
-                </a>
+                <!-- Twitter/X Feed Section - Interactive Widget -->
+                <section class="twitter-feed-section">
+                    <h2 class="twitter-section-title">Follow Me on X</h2>
+                    <div class="twitter-feed-container">
+                        <!-- Interactive Twitter/X Timeline Widget
+                             This widget is scrollable and allows users to:
+                             - Scroll through all tweets in the timeline
+                             - Like, retweet, and reply to tweets
+                             - Follow the account directly from the widget
+                             - Click to view full tweets on X
+                             - View embedded media and links
+                             Note: Removed data-tweet-limit to enable infinite scrolling -->
+                        <a class="twitter-timeline"
+                           data-theme="light"
+                           data-width="500"
+                           data-height="300"
+                           data-chrome="noheader nofooter noborders transparent"
+                           data-show-replies="false"
+                           data-dnt="true"
+                           href="https://twitter.com/oliviaschnur331">
+                           Posts by @oliviaschnur331
+                        </a>
+                    </div>
+                </section>
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                <!-- End Twitter/X Feed Section -->
+
             </div>
-        </section>
-        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-        <!-- End Twitter/X Feed Section -->
-
-    </div>
+            <div class="vertical-name right">
+                <span>s</span>
+                <span>c</span>
+                <span>h</span>
+                <span>n</span>
+                <span>u</span>
+                <span>r</span>
+            </div>
+        </div>
     </main>
 
     <footer>
