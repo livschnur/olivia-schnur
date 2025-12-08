@@ -143,13 +143,18 @@
         .ascii-art-overlay {
             position: absolute;
             bottom: 0;
-            left: calc(clamp(242px, 35vw, 352px) - 24px);
+            left: 50%;
             width: clamp(360px, 42vw, 540px);
-            opacity: 0.9;
-            transform: rotate(60deg);
+            opacity: 0.3;
+            transform: translateX(-50%) rotate(-60deg);
             transform-origin: center;
             pointer-events: none;
             filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.15));
+            z-index: 0;
+        }
+
+        .hero > *:not(.ascii-art-overlay) {
+            position: relative;
             z-index: 1;
         }
 
