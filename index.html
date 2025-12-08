@@ -1,256 +1,274 @@
-<!DOCTYPE html> 
-<html lang="en"> 
-    <head> 
-        <meta charset="UTF-8"> 
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-        <title>olivia schnur - Home</title> 
-        <link rel="stylesheet" href="styles.css"> 
-        <style> 
-            @font-face { 
-                font-family: 'LilexNerdFont'; 
-                 src: url('LilexNerdFont-ExtraLight.ttf') 
-            format('truetype'); 
-                font-weight: normal; 
-                font-style: normal; 
-            }
-            @font-face { 
-                font-family: 'LilexNerdFont'; 
-                src: url('LilexNerdFont-Bold.ttf')
-            format('truetype'); 
-                font-weight: bold; 
-                font-style: normal; 
-            } 
-            * { 
-                margin: 0; 
-                padding: 0; 
-                box-sizing: border-box; 
-            } 
-            html, body {
-                height: 100%; 
-                overflow: hidden; 
-            } 
-            body { 
-                font-family: 'LilexNerdFont', Arial, sans-serif; 
-                line-height: 1.6; 
-                color: #333; 
-                display: flex; 
-                flex-direction: column; 
-                background-color: #fffaf0;
-            }
-            
-            .main-content { 
-                flex: 1; 
-                min-height: 0; 
-                display: flex; 
-                flex-direction: column; 
-            } 
-            .home-layout { 
-                flex: 1; 
-                min-height: 0; 
-                height: 100%; 
-                display: grid; 
-                grid-template-columns: 80px 1fr 80px; 
-                align-items: stretch; gap: 1rem; 
-            } 
-            .vertical-name { 
-                display: flex; 
-                flex-direction: column; 
-                justify-content: space-between; 
-                align-items: center; 
-                font-weight: normal; 
-                text-align: center; 
-                padding-top: 0.5rem; 
-            } 
-            .vertical-name span { 
-                display: block; 
-                width: 100%; 
-                text-align: center; 
-                font-size: 2.5rem; 
-            } 
-            
-            nav { 
-                background-color: #fffaf0; 
-                padding: 0.5rem 2rem; 
-                flex-shrink: 0; 
-            } 
-            
-            nav ul { 
-                list-style: none; 
-                display: flex; 
-                justify-content: center; 
-                gap: 2rem; 
-            }
-            
-            nav a { 
-                text-decoration: none; 
-                font-weight: 500; 
-                transition: color 0.3s ease; 
-            } 
-            nav a:hover { 
-                color: #3498db; 
-            } 
-            
-            .container { 
-                max-width: 900px; 
-                margin: 0 auto; 
-                padding: 1.5rem 2rem; 
-                flex: 1; 
-                min-height: 0; 
-                display: flex; 
-                flex-direction: column; 
-            } 
-            
-            .hero { 
-                display: flex; 
-                gap: 1.5rem; 
-                align-items: flex-start; 
-                flex-wrap: wrap; 
-                margin-top: 1.5rem; 
-            } 
-            
-            .hero-left { 
-                display: flex; 
-                flex-direction: column; 
-                align-items: flex-start; 
-                gap: 1rem; 
-                transform: translateX(-12px); 
-            } 
-            
-            .profile-photo-wrapper { 
-                width: clamp(220px, 32vw, 320px); 
-                max-height: calc(100vh - 200px); 
-                overflow: visible; 
-            } 
-            
-            .profile-photo { 
-                display: block; 
-                width: 100%; 
-                height: auto; 
-                max-height: 100%; 
-                object-fit: contain; 
-                border-radius: 0; 
-                box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15); 
-            } 
-            
-            .hero-content { 
-                flex: 1; 
-                min-width: 260px; 
-                display: flex; 
-                flex-direction: column; 
-                gap: 1.5rem; 
-            } 
-            
-            .cta-links { 
-                display: flex; 
-                justify-content: flex-start; 
-                gap: 1rem; 
-                flex-wrap: wrap; 
-            } 
-            
-            .cta-links a { 
-                display: inline-block; 
-                padding: 0.75rem 1.5rem; 
-                background-color: #ffffff; 
-                text-decoration: none; 
-                border-radius: 5px; 
-                border: 1px solid #000000; 
-                transition: background-color 0.3s ease; 
-            } 
-            .cta-links a:hover { 
-                background-color: #f0f0f0; 
-            } 
-            
-            .social-feed-section { 
-                margin-top: 1rem; 
-                display: flex; 
-                flex-direction: column; 
-                gap: 0.75rem; 
-            } 
-            
-            .social-feed-title { 
-                font-size: 1.1rem; 
-                font-weight: bold; 
-            } 
-            
-            .social-feed-scroll { 
-                background-color: #ffffff; 
-                border-radius: 12px; 
-                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
-                padding: 0.75rem; 
-                max-height: 320px; 
-                overflow-y: auto; 
-                border: 1px solid #e5e7eb; 
-            } 
-            
-            footer { 
-                text-align: center; 
-                padding: 0.5rem; 
-                flex-shrink: 0; 
-                background-color: #fffaf0; 
-            } 
-            
-            .tagline { 
-                font-size: 1rem; 
-                font-style: italic; 
-            } 
-        </style> 
-    </head> 
-    <body> 
-        <main class="main-content"> 
-            <div class="home-layout"> 
-                <div class="vertical-name left"> 
-                    <span>o</span> 
-                    <span>l</span> 
-                    <span>i</span> 
-                    <span>v</span> 
-                    <span>i</span> 
-                    <span>a</span> 
-                </div> 
-                
-                <div class="container"> 
-                    <nav> 
-                        <ul> 
-                            <li><a href="index.html">Home</a></li> 
-                            <li><a href="experience.html">Experience</a></li> 
-                            <li><a href="portfolio.html">Portfolio</a></li> 
-                            <li><a href="contact.html">Contact</a></li> 
-                        </ul> 
-                    </nav> 
-                    
-                    <section class="hero"> 
-                        <div class="hero-left"> 
-                            <div class="profile-photo-wrapper"> 
-                                <img src="picture of me.jpeg" alt="Portrait of Olivia Schnur" class="profile-photo">
-                            </div> 
-                        </div> 
-                        <div class="hero-content"> 
-                            <div class="cta-links"> 
-                                <a href="experience.html">View Experience</a> 
-                                <a href="portfolio.html">View My Work</a> 
-                                <a href="contact.html">Get In Touch</a> </div> 
-                            <section class="social-feed-section"> 
-                                <h2 class="social-feed-title">Latest on X</h2> 
-                                <div class="social-feed-scroll">
-                                    <div class="elfsight-app-5f816b97-4b31-4c74-876a-51b0d9aa1140" data-elfsight-app-lazy></div> 
-                                </div> 
-                            </section> 
-                        </div> 
-                    </section> 
-                </div> 
-                <div class="vertical-name right"> 
-                    <span>s</span> 
-                    <span>c</span> 
-                    <span>h</span> 
-                    <span>n</span> 
-                    <span>u</span> 
-                    <span>r</span> 
-                </div> 
-            </div> 
-        </main> 
-        <footer> 
-            <p class="tagline">Aspiring Music Business Professional &amp; Student</p> 
-        </footer> 
-        <!-- Elfsight script (only once, at the end of body) --> 
-        <script src="https://elfsightcdn.com/platform.js" async></script> 
-    </body> 
-</html>                
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>olivia schnur - Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @font-face {
+            font-family: 'LilexNerdFont';
+            src: url('LilexNerdFont-ExtraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'LilexNerdFont';
+            src: url('LilexNerdFont-Bold.ttf') format('truetype');
+            font-weight: bold;
+            font-style: normal;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+            overflow: hidden;
+        }
+
+        body {
+            font-family: 'LilexNerdFont', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            background-color: #fffaf0;
+        }
+
+        .main-content {
+            flex: 1;
+            min-height: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .home-layout {
+            flex: 1;
+            min-height: 0;
+            height: 100%;
+            display: grid;
+            grid-template-columns: 80px 1fr 80px;
+            align-items: stretch;
+            gap: 1rem;
+        }
+
+        .vertical-name {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: normal;
+            text-align: center;
+            padding-top: 0.5rem;
+        }
+
+        .vertical-name span {
+            display: block;
+            width: 100%;
+            text-align: center;
+            font-size: 2.5rem;
+        }
+
+        nav {
+            background-color: #fffaf0;
+            padding: 0.5rem 2rem;
+            flex-shrink: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #3498db;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 1.5rem 2rem;
+            flex: 1;
+            min-height: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .hero {
+            display: flex;
+            gap: 1.5rem;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            /* push content slightly down so it doesn't go above the "v" */
+            margin-top: 1.5rem;
+        }
+
+        .hero-left {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 1rem;
+            transform: translateX(-12px);
+        }
+
+        /* IMAGE: keep original proportions, no cropping, and keep it from getting too tall */
+        .profile-photo-wrapper {
+            width: clamp(220px, 32vw, 320px);
+            max-height: calc(100vh - 200px); /* keeps it from towering over the layout */
+            overflow: visible;
+        }
+
+        .profile-photo {
+            display: block;
+            width: 100%;
+            height: auto;
+            max-height: 100%;
+            object-fit: contain; /* no cropping */
+            border-radius: 0;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+        }
+
+        .hero-content {
+            flex: 1;
+            min-width: 260px;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .cta-links {
+            display: flex;
+            justify-content: flex-start;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .cta-links a {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background-color: #ffffff;
+            text-decoration: none;
+            border-radius: 5px;
+            border: 1px solid #000000;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-links a:hover {
+            background-color: #f0f0f0;
+        }
+
+        /* SCROLLABLE SOCIAL FEED SECTION */
+        .social-feed-section {
+            margin-top: 1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .social-feed-title {
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+
+        .social-feed-scroll {
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            padding: 0.75rem;
+            max-height: 320px;  /* this is the scrollable height */
+            overflow-y: auto;   /* makes it scrollable */
+            border: 1px solid #e5e7eb;
+        }
+
+        footer {
+            text-align: center;
+            padding: 0.5rem;
+            flex-shrink: 0;
+            background-color: #fffaf0;
+        }
+
+        .tagline {
+            font-size: 1rem;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <main class="main-content">
+        <div class="home-layout">
+            <div class="vertical-name left">
+                <span>o</span>
+                <span>l</span>
+                <span>i</span>
+                <span>v</span>
+                <span>i</span>
+                <span>a</span>
+            </div>
+
+            <div class="container">
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="experience.html">Experience</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <section class="hero">
+                    <div class="hero-left">
+                        <div class="profile-photo-wrapper">
+                            <img src="picture of me.jpeg" alt="Portrait of Olivia Schnur" class="profile-photo">
+                        </div>
+                    </div>
+
+                    <div class="hero-content">
+                        <div class="cta-links">
+                            <a href="experience.html">View Experience</a>
+                            <a href="portfolio.html">View My Work</a>
+                            <a href="contact.html">Get In Touch</a>
+                        </div>
+
+                        <!-- SCROLLABLE X / ELFSIGHT WIDGET -->
+                        <section class="social-feed-section">
+                            <h2 class="social-feed-title">Latest on X</h2>
+                            <div class="social-feed-scroll">
+                                <!-- Elfsight Social Feed -->
+                                <div class="elfsight-app-5f816b97-4b31-4c74-876a-51b0d9aa1140" data-elfsight-app-lazy></div>
+                            </div>
+                        </section>
+                    </div>
+                </section>
+            </div>
+
+            <div class="vertical-name right">
+                <span>s</span>
+                <span>c</span>
+                <span>h</span>
+                <span>n</span>
+                <span>u</span>
+                <span>r</span>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p class="tagline">Aspiring Music Business Professional &amp; Student</p>
+    </footer>
+
+    <!-- Elfsight script (only once, at the end of body) -->
+    <script src="https://elfsightcdn.com/platform.js" async></script>
+</body>
+</html>
