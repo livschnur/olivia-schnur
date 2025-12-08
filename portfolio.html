@@ -158,6 +158,20 @@
 
     <script>
         function downloadPDF(filename) {
+            // Allowlist of valid PDF files
+            const validPDFs = [
+                'Durable Appliances Tweets & Ads.pdf',
+                'Durable Appliances Marketing Email.pdf',
+                'Concert Review - The Hellp.pdf',
+                'Durable Appliances Blog Post.pdf'
+            ];
+            
+            // Validate filename against allowlist
+            if (!validPDFs.includes(filename)) {
+                console.error('Invalid PDF filename');
+                return;
+            }
+            
             // Create a temporary anchor element
             const link = document.createElement('a');
             link.href = filename;
