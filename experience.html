@@ -22,45 +22,44 @@
             line-height: 1.6;
             color: #333;
             background-color: #fffaf0;
-        }
-       .container {
-           max-width: 1000px;
-           margin-left: 0;      /* anchor to the left */
-           margin-right: auto;  /* stretch out toward the right */
-           padding: 2rem 1rem;
-           height: calc(100vh - 8rem);
-           display: flex;
-           flex-direction: column;
 
         }
+       .container {
+            width: 100%;          /* take full viewport width */
+            max-width: none;      /* remove the 1000px clamp */
+            margin: 0;            /* no centering / no extra margins */
+            padding: 2rem 1rem;
+            height: calc(100vh - 8rem);
+            display: flex;
+            flex-direction: column;
+        }
+        
         .experience-layout {
             display: flex;
-            justify-content: space-between; 
+            justify-content: space-between; /* pushes left & right columns apart */
             gap: 2rem;
             align-items: stretch;
             padding: 1.5rem 0;
             flex: 1;
             min-height: 0;
         }
+
         .left-column {
             flex: 2;
             min-width: 0;
             display: flex;
             flex-direction: column;
-            min-height: 0;
         }
+
         .right-column {
-            flex: 1;
-            margin-left: auto;   /* PUSHES COLUMN TO THE RIGHT SIDE */
+            flex: 0 0 30%;
+            margin-left: auto;           /* push right column to far right */
             display: flex;
             flex-direction: column;
-            justify-content: flex-start; /* normal vertical layout */
-            align-items: flex-end;       /* aligns content to the RIGHT edge inside */
             gap: 1.5rem;
             min-width: 0;
-            min-height: 0;
-
         }
+
         h1 {
             font-size: 2.5rem;
             color: #2c3e50;
@@ -145,6 +144,12 @@
             margin-bottom: 0.5rem;
             font-size: 1.1rem;
         }
+        
+        .right-column > * {
+            align-self: flex-end;  /* make each card sit against the right edge */
+            width: 100%;           /* let it stretch left within its column */
+        }
+
         .professional-summary p {
             margin-bottom: 0.4rem;
             font-size: 0.7rem;
@@ -153,13 +158,13 @@
         .professional-summary p {
             margin-bottom: 0.4rem;
             font-size: 0.7rem;line-height: 1.3;
-}
+        }
 
-/* 👉 ADD THIS RIGHT BELOW THAT BLOCK 👇 */
-.professional-summary,
-.skills-section-new {
-    text-align: right;
-}
+
+        .professional-summary,
+        .skills-section-new {
+            text-align: right;
+        }
 
         .skills-list {
             display: flex;
@@ -181,10 +186,6 @@
             padding: 2rem;
             color: #7f8c8d;
             margin-top: 3rem;
-        }
-        @media (max-width: 992px) {
-            .experience-layout {
-                flex-direction: column;
             }
             .professional-summary,
             .skills-section-new {
