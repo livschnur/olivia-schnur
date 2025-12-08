@@ -195,53 +195,6 @@
             margin-bottom: 0;
             font-weight: bold;
         }
-        /* Twitter Feed Section Styles */
-        .twitter-feed-section {
-            margin-top: 2rem;
-            text-align: center;
-            flex: 1;
-            min-height: 0;
-            display: flex;
-            flex-direction: column;
-        }
-        .twitter-section-title {
-            font-size: 1.4rem;
-            color: #2c3e50;
-            margin-bottom: 0.75rem;
-            font-weight: 600;
-            letter-spacing: 0.05em;
-            flex-shrink: 0;
-        }
-        .twitter-feed-container {
-            display: flex;
-            justify-content: center;
-            align-items: stretch;
-            background-color: #f5f8fa;
-            border: 1px solid #e1e8ed;
-            border-radius: 16px;
-            box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-            padding: 0.75rem;
-            max-width: 480px;
-            margin: 0 auto;
-            overflow: hidden;
-            flex: 1;
-            min-height: 0;
-        }
-        .twitter-feed-container .twitter-timeline {
-            width: 100%;
-        }
-        .twitter-feed-container .twitter-timeline iframe {
-            border-radius: 12px;
-        }
-        @media (max-width: 600px) {
-            .twitter-feed-container {
-                padding: 0.5rem;
-                max-width: 100%;
-            }
-            .twitter-section-title {
-                font-size: 1.25rem;
-            }
-        }
     </style>
 </head>
 <body>
@@ -277,32 +230,6 @@
                             <a href="portfolio.html">View My Work</a>
                             <a href="contact.html">Get In Touch</a>
                         </div>
-                        <!-- Twitter/X Feed Section - Interactive Widget -->
-                        <section class="twitter-feed-section">
-                            <h2 class="twitter-section-title">Follow Me on X</h2>
-                            <div class="twitter-feed-container">
-                                <!-- Interactive Twitter/X Timeline Widget
-                                     This widget is scrollable and allows users to:
-                                     - Scroll through all tweets in the timeline
-                                     - Like, retweet, and reply to tweets
-                                     - Follow the account directly from the widget
-                                     - Click to view full tweets on X
-                                     - View embedded media and links
-                                     Note: Removed data-tweet-limit to enable infinite scrolling -->
-                                <a class="twitter-timeline"
-                                   data-theme="light"
-                                   data-width="500"
-                                   data-height="300"
-                                   data-chrome="noheader nofooter noborders transparent"
-                                   data-show-replies="false"
-                                   data-dnt="true"
-                                   href="https://twitter.com/oliviaschnur331">
-                                   Posts by @oliviaschnur331
-                                </a>
-                            </div>
-                        </section>
-                        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-                        <!-- End Twitter/X Feed Section -->
                     </div>
                 </section>
 
