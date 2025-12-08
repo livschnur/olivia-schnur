@@ -35,37 +35,21 @@ body {
 .home-layout .site-nav-list {
     position: relative;
     width: 100%;
-}
-
-.home-layout .site-nav-list li:first-child {
-    position: absolute;
-    left: calc(80px + 1in);
-}
-
-.home-layout .site-nav-list li:last-child {
-    position: absolute;
-    right: calc(80px + 1in);
+    justify-content: space-between;
+    padding: 0 calc(80px + 1in);
 }
 
 /* Responsive adjustments for smaller screens */
 @media (max-width: 1024px) {
-    .home-layout .site-nav-list li:first-child {
-        left: calc(60px + 0.75in);
-    }
-    
-    .home-layout .site-nav-list li:last-child {
-        right: calc(60px + 0.75in);
+    .home-layout .site-nav-list {
+        padding: 0 calc(60px + 0.75in);
     }
 }
 
 @media (max-width: 768px) {
     .home-layout .site-nav-list {
         justify-content: center;
-    }
-    
-    .home-layout .site-nav-list li:first-child,
-    .home-layout .site-nav-list li:last-child {
-        position: static;
+        padding: 0 2rem;
     }
 }
 
