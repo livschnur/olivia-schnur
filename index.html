@@ -151,24 +151,6 @@
             width: 100%;
         }
 
-        .ascii-art-overlay {
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            width: clamp(800px, 120vw, 2000px);
-            opacity: 0.3;
-            transform: translateX(-50%) rotate(-60deg);
-            transform-origin: center;
-            pointer-events: none;
-            filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.15));
-            z-index: 0;
-        }
-
-        .hero > *:not(.ascii-art-overlay) {
-            position: relative;
-            z-index: 1;
-        }
-
         .cta-links {
             display: flex;
             flex-direction: column;
@@ -273,8 +255,6 @@
                             </div>
                         </section>
                     </div>
-
-                    <img src="ascii-art-removebg-preview.png" alt="ASCII art decorative accent" class="ascii-art-overlay">
                 </section>
             </div>
 
