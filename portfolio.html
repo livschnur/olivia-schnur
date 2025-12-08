@@ -49,11 +49,6 @@
                 grid-template-columns: 1fr;
             }
         }
-        .project-card-link {
-            text-decoration: none;
-            color: inherit;
-            display: block;
-        }
         .project-card {
             background-color: #fff;
             border-radius: 8px;
@@ -61,10 +56,13 @@
             overflow: hidden;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-        .project-card-link:hover .project-card,
         .project-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+        }
+        a.project-card {
+            text-decoration: none;
+            color: inherit;
             cursor: pointer;
         }
         .project-image {
@@ -165,18 +163,16 @@
                 </div>
             </div>
 
-            <a href="Durable Appliances Blog Post.pdf" download="Durable-Appliances-Blog-Post.pdf" class="project-card-link" aria-label="Download Durable Appliances Blog Post PDF">
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="blog.png" alt="Blog Post: Durable Appliances">
-                    </div>
-                    <div class="project-content">
-                        <h3>Blog Post: Durable Appliances</h3>
-                        <p>A sample text written for a company's blog</p>
-                        <div class="project-tags">
-                            <span>Writing</span>
-                            <span>Content</span>
-                        </div>
+            <a href="Durable Appliances Blog Post.pdf" download="Durable-Appliances-Blog-Post.pdf" class="project-card" aria-label="Download Durable Appliances Blog Post PDF">
+                <div class="project-image">
+                    <img src="blog.png" alt="Blog Post: Durable Appliances">
+                </div>
+                <div class="project-content">
+                    <h3>Blog Post: Durable Appliances</h3>
+                    <p>A sample text written for a company's blog</p>
+                    <div class="project-tags">
+                        <span>Writing</span>
+                        <span>Content</span>
                     </div>
                 </div>
             </a>
