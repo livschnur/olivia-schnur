@@ -92,16 +92,16 @@
             flex-direction: column;
             align-items: center;
         }
-
-        /* Button Styles in a Vertical List */
-        .cta-links {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 1rem;
-            width: 100%;
+       .cta-links {
+           display: flex;
+           flex-direction: column; /* Stack buttons vertically */
+           align-items: flex-start; /* Align to the left or adjust as needed */
+           gap: 0.5rem; /* Space between buttons */
+           width: 100%; /* Make buttons take the full width of the container */
+       }
+        .cta-links a {
+    width: 100%; /* Each button stretches to the full width of its container */
         }
-
         .cta-links a {
             display: block;
             width: 100%;
