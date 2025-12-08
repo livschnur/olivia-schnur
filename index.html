@@ -177,6 +177,23 @@
             margin-bottom: 1rem;
             font-size: 1rem;
         }
+        .media-stack {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        .media-wrapper {
+            width: 100%;
+            max-width: 520px;
+        }
+        .profile-image {
+            width: 100%;
+            display: block;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
         .cta-links {
             display: flex;
             justify-content: center;
@@ -231,8 +248,7 @@
             border-radius: 12px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
             padding: 0.5rem;
-            max-width: 520px;
-            margin: 0 auto;
+            width: 100%;
             overflow: auto;
             flex: 1;
             min-height: 0;
@@ -323,6 +339,38 @@
                         <!-- End Twitter/X Feed Section -->
                     </div>
                 </section>
+                <div class="media-stack">
+                    <div class="media-wrapper">
+                        <img src="IMG_0784.jpeg" alt="Olivia Schnur portrait" class="profile-image">
+                    </div>
+
+                    <!-- Twitter/X Feed Section - Interactive Widget -->
+                    <section class="twitter-feed-section media-wrapper">
+                        <h2 class="twitter-section-title">Follow Me on X</h2>
+                        <div class="twitter-feed-container">
+                            <!-- Interactive Twitter/X Timeline Widget
+                                 This widget is scrollable and allows users to:
+                                 - Scroll through all tweets in the timeline
+                                 - Like, retweet, and reply to tweets
+                                 - Follow the account directly from the widget
+                                 - Click to view full tweets on X
+                                 - View embedded media and links
+                                 Note: Removed data-tweet-limit to enable infinite scrolling -->
+                            <a class="twitter-timeline"
+                               data-theme="light"
+                               data-width="500"
+                               data-height="300"
+                               data-chrome="noheader nofooter noborders transparent"
+                               data-show-replies="false"
+                               data-dnt="true"
+                               href="https://twitter.com/oliviaschnur331">
+                               Posts by @oliviaschnur331
+                            </a>
+                        </div>
+                    </section>
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                    <!-- End Twitter/X Feed Section -->
+                </div>
 
             </div>
             <div class="vertical-name right">
