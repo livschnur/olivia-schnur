@@ -24,19 +24,25 @@
             background-color: #fffaf0;
         }
         .container {
-            max-width: 900px;
-            margin: 0;
+            max-width: 1200px;
+            margin: 0 auto;
             padding: 3rem 2rem;
         }
-        @media (max-width: 768px) {
-            .container {
-                padding: 2rem 1rem;
-            }
+        .experience-layout {
+            display: flex;
+            gap: 2rem;
+            align-items: flex-start;
         }
-        @media (max-width: 480px) {
-            .container {
-                padding: 1.5rem 1rem;
-            }
+        .left-column {
+            flex: 1;
+            min-width: 0;
+        }
+        .right-column {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            min-width: 0;
         }
         h1 {
             font-size: 2.5rem;
@@ -59,14 +65,33 @@
             padding: 2rem;
             border-radius: 8px;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            height: 100%;
+        }
+        .professional-summary {
+            background-color: #ede5d5;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            flex: 2;
+        }
+        .skills-section-new {
+            background-color: #ede5d5;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            flex: 1;
         }
         @media (max-width: 768px) {
-            .about-content {
+            .about-content,
+            .professional-summary,
+            .skills-section-new {
                 padding: 1.5rem;
             }
         }
         @media (max-width: 480px) {
-            .about-content {
+            .about-content,
+            .professional-summary,
+            .skills-section-new {
                 padding: 1.25rem;
             }
         }
@@ -85,30 +110,13 @@
                 font-size: 1rem;
             }
         }
-        .skills-section {
-            margin-top: 2rem;
-            padding: 1.5rem;
-            background-color: #ede5d5;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            max-width: 500px;
-            margin-left: 0;
-            margin-right: auto;
-        }
-        .additional-box {
-            margin-top: 1.5rem;
-            padding: 1.75rem;
-            background-color: #ede5d5;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            width: 100%;
-        }
-        .additional-box h2 {
+        .professional-summary h2,
+        .skills-section-new h2 {
             color: #2c3e50;
             margin-bottom: 1rem;
             font-size: 1.5rem;
         }
-        .additional-box p {
+        .professional-summary p {
             margin-bottom: 0.75rem;
             font-size: 1.05rem;
         }
@@ -133,6 +141,31 @@
             color: #7f8c8d;
             margin-top: 3rem;
         }
+        @media (max-width: 992px) {
+            .experience-layout {
+                flex-direction: column;
+            }
+            .professional-summary,
+            .skills-section-new {
+                padding: 1.5rem;
+            }
+        }
+        @media (max-width: 768px) {
+            .container {
+                padding: 2rem 1rem;
+            }
+            .experience-layout {
+                gap: 1.5rem;
+            }
+        }
+        @media (max-width: 480px) {
+            .container {
+                padding: 1.5rem 1rem;
+            }
+            .experience-layout {
+                gap: 1rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -148,8 +181,9 @@
     <main class="main-content">
         <h1>Experience</h1>
     <div class="container">
-
-        <div class="about-content">
+        <div class="experience-layout">
+            <div class="left-column">
+                <div class="about-content">
             <h2>Professional Experience</h2>
             <p><strong>Showrunner – WTBU<br>Boston, MA<br>
             2024 – Present</strong></p>
@@ -169,6 +203,29 @@
             2024-2025</p>
 
             <p>I streamlined the band's booking process, enabling them to book about two shows a month by organizing their concert availability and coordinating support from other talent. I facilitated meetings twice a month and created an agenda to discuss the band's project release timeline and their creative direction plan for social media, advertising, and music videos. I also scheduled recording dates and recorded the stems for three songs to send to the producer.</p>
+                </div>
+            </div>
+            
+            <div class="right-column">
+                <div class="professional-summary">
+                    <h2>Professional Summary</h2>
+                    <p>Passionate music industry professional with expertise in A&R, talent management, and artist development. Experienced in leveraging social media and branding to amplify artist visibility and engagement. Proven track record in scouting talent, managing booking logistics, and coordinating with industry stakeholders to support emerging and established artists.</p>
+                </div>
+                
+                <div class="skills-section-new">
+                    <h2>Skills</h2>
+                    <ul class="skills-list">
+                        <li>A&R</li>
+                        <li>Talent Scouting</li>
+                        <li>Artist Management</li>
+                        <li>Booking</li>
+                        <li>Social Media</li>
+                        <li>Branding</li>
+                        <li>Audio Recording</li>
+                        <li>Music Production</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
     </main>
