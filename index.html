@@ -18,15 +18,16 @@
             font-weight: bold;
             font-style: normal;
         }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
+
         html, body {
             height: 100%;
-            overflow-x: hidden;
-            overflow-y: auto;
+            overflow: hidden;
         }
 
         body {
@@ -35,13 +36,16 @@
             color: #333;
             display: flex;
             flex-direction: column;
+            background-color: #fffaf0;
         }
+
         .main-content {
             flex: 1;
             min-height: 0;
             display: flex;
             flex-direction: column;
         }
+
         .home-layout {
             flex: 1;
             min-height: 0;
@@ -51,42 +55,47 @@
             align-items: stretch;
             gap: 1rem;
         }
+
         .vertical-name {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             align-items: center;
             font-weight: normal;
-            color: #fffaf0;
             text-align: center;
             padding-top: 0.5rem;
         }
+
         .vertical-name span {
             display: block;
             width: 100%;
             text-align: center;
             font-size: 2.5rem;
         }
+
         nav {
             background-color: #fffaf0;
             padding: 0.5rem 2rem;
             flex-shrink: 0;
         }
+
         nav ul {
             list-style: none;
             display: flex;
             justify-content: center;
             gap: 2rem;
         }
+
         nav a {
-            color: #2c3e50;
             text-decoration: none;
             font-weight: 500;
             transition: color 0.3s ease;
         }
+
         nav a:hover {
             color: #3498db;
         }
+
         .container {
             max-width: 900px;
             margin: 0 auto;
@@ -96,35 +105,39 @@
             display: flex;
             flex-direction: column;
         }
+
         .hero {
             display: flex;
             gap: 1.5rem;
             align-items: flex-start;
             flex-wrap: wrap;
+            /* push content slightly down so it doesn't go above the "v" */
+            margin-top: 1.5rem;
         }
+
         .hero-left {
             display: flex;
             flex-direction: column;
             align-items: flex-start;
             gap: 1rem;
             transform: translateX(-12px);
-            margin-top: 18vh; /* tweak this number until the top aligns with the 'v' */
         }
-       .profile-photo-wrapper {
-    /* Let the wrapper be as big as it needs, but not too huge */
-           max-width: 100%;
-           max-height: 70vh;
-           overflow: visible; /* don’t crop the image */
+
+        /* IMAGE: keep original proportions, no cropping, and keep it from getting too tall */
+        .profile-photo-wrapper {
+            max-width: 100%;
+            max-height: calc(100vh - 200px); /* keeps it from towering over the layout */
+            overflow: visible;
         }
 
         .profile-photo {
             display: block;
-            width: auto;          /* use original width */
-            height: auto;         /* use original height */
-            max-width: 100%;      /* shrink to fit small screens */
-            max-height: 70vh;     /* don’t get taller than the viewport */
+            width: auto;
+            height: auto;
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain; /* no cropping */
             border-radius: 0;
-            object-fit: contain;  /* respect aspect ratio, no cropping */
             box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
         }
 
@@ -135,134 +148,62 @@
             flex-direction: column;
             gap: 1.5rem;
         }
-        header {
-            text-align: left;
-            margin-bottom: 1rem;
-            flex-shrink: 0;
-        }
-        h1 {
-            font-size: 3.0rem;
-            color: #fffaf0;
-            margin-bottom: 1rem;
-            font-weight: bold;
-        }
-        .tagline {
-            font-size: 1.2rem;
-            color: #7f8c8d;
-            font-style: italic;
-        }
-        .intro {
-            text-align: center;
-            padding: 1.5rem;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            flex-shrink: 0;
-        }
-        .intro p {
-            margin-bottom: 1rem;
-            font-size: 1rem;
-        }
-        .media-stack {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 1rem;
-            margin-top: 1.5rem;
-        }
-        .media-wrapper {
-            width: 100%;
-            max-width: 520px;
-        }
-        .profile-image {
-            width: 100%;
-            display: block;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        }
+
         .cta-links {
             display: flex;
-            justify-content: center;
+            justify-content: flex-start;
             gap: 1rem;
             flex-wrap: wrap;
         }
+
         .cta-links a {
             display: inline-block;
             padding: 0.75rem 1.5rem;
             background-color: #ffffff;
-            color: #000000;
             text-decoration: none;
             border-radius: 5px;
             border: 1px solid #000000;
             transition: background-color 0.3s ease;
         }
+
         .cta-links a:hover {
             background-color: #f0f0f0;
         }
+
+        /* SCROLLABLE SOCIAL FEED SECTION */
+        .social-feed-section {
+            margin-top: 1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .social-feed-title {
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+
+        .social-feed-scroll {
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            padding: 0.75rem;
+            max-height: 320px;  /* this is the scrollable height */
+            overflow-y: auto;   /* makes it scrollable */
+            border: 1px solid #e5e7eb;
+        }
+
         footer {
             text-align: center;
             padding: 0.5rem;
-            color: #7f8c8d;
             flex-shrink: 0;
-        }
-        .footer-name {
-            font-size: 2rem;
-            margin-bottom: 0;
-            font-weight: bold;
-        }
-        .x-widget {
-            margin-top: 1.75rem;
-            background-color: #fff;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            padding: 1.5rem;
-            border: 1px solid #e5e7eb;
-        }
-        .x-widget-header {
-            display: flex;
-            flex-direction: column;
-            gap: 0.35rem;
-            margin-bottom: 0.5rem;
-        }
-        .x-widget-title {
-            font-size: 1.4rem;
-            font-weight: bold;
-            color: #2c3e50;
-        }
-        .x-widget-subtitle {
-            color: #7f8c8d;
-            font-size: 0.95rem;
-        }
-        .social-feed-scroll {
-            width: 100%;
-            max-width: 520px;   /* adjust if you want wider/narrower */
-            height: 400px;      /* this controls how tall the scroll window is */
-            overflow-y: auto;   /* enables vertical scrolling */
-            overflow-x: hidden; /* prevents sideways scrolling */
-            padding-right: 8px; /* optional: prevents scrollbar overlap */
-            margin-top: 1.5rem;
-            border-radius: 12px;
-        }
-        .x-widget {
-            margin-top: 1.75rem;
-            background-color: #fff;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            padding: 1.5rem;
-            border: 1px solid #e5e7eb;
+            background-color: #fffaf0;
         }
 
-/* This is the scrollable area */
-.x-feed-scroll {
-    max-height: 350px;   /* adjust this number to taste */
-    overflow-y: auto;
-}
-
-/* Make sure the widget fills the scroll box */
-.elfsight-app-5f816b97-4b31-4c74-876a-51b0d9aa1140 {
-    width: 100%;
-}
-
+        .tagline {
+            font-size: 1rem;
+            font-style: italic;
+        }
     </style>
 </head>
 <body>
@@ -276,6 +217,7 @@
                 <span>i</span>
                 <span>a</span>
             </div>
+
             <div class="container">
                 <nav>
                     <ul>
@@ -285,35 +227,33 @@
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </nav>
+
                 <section class="hero">
                     <div class="hero-left">
                         <div class="profile-photo-wrapper">
                             <img src="picture of me.jpeg" alt="Portrait of Olivia Schnur" class="profile-photo">
                         </div>
                     </div>
+
                     <div class="hero-content">
                         <div class="cta-links">
                             <a href="experience.html">View Experience</a>
                             <a href="portfolio.html">View My Work</a>
                             <a href="contact.html">Get In Touch</a>
                         </div>
-                        
-                        <section class="x-widget">
-                            <div class="x-widget-header">
-                                <div class="x-widget-title">Latest on X (Twitter)</div>
-                                <div class="x-widget-subtitle">@livschnur</div>
-                            </div>
-                            
-                            <div class="x-feed-scroll">
+
+                        <!-- SCROLLABLE X / ELFSIGHT WIDGET -->
+                        <section class="social-feed-section">
+                            <h2 class="social-feed-title">Latest on X</h2>
+                            <div class="social-feed-scroll">
+                                <!-- Elfsight Social Feed -->
                                 <div class="elfsight-app-5f816b97-4b31-4c74-876a-51b0d9aa1140" data-elfsight-app-lazy></div>
                             </div>
                         </section>
                     </div>
-
-                    </div>
                 </section>
-             <script src="https://elfsightcdn.com/platform.js" async></script>
             </div>
+
             <div class="vertical-name right">
                 <span>s</span>
                 <span>c</span>
@@ -326,7 +266,10 @@
     </main>
 
     <footer>
-        <p class="tagline">Student &amp; Aspiring Music Business Professional</p>
+        <p class="tagline">Aspiring Music Business Professional &amp; Student</p>
     </footer>
+
+    <!-- Elfsight script (only once, at the end of body) -->
+    <script src="https://elfsightcdn.com/platform.js" async></script>
 </body>
 </html>
