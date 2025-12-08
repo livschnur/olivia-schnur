@@ -107,20 +107,20 @@
             gap: 1rem;
             transform: translateX(-12px);
         }
-        .profile-photo-wrapper {
-            width: 40%;
-            max-width: 45%;
-            max-height: 60vh;
-            overflow: hidden;
+       .profile-photo-wrapper {
+            /* Let the image define its own size */
+            max-width: 100%;
+            overflow: visible; /* no cropping */
         }
-        .profile-photo {
-            width: clamp(500px, 30vw, 420px);
-            height: clamp(600px, 30vw, 420px);
-            max-height: 60vh;
+     .profile-photo {
+            display: block;
+            width: auto;         /* use the image’s intrinsic width */
+            height: auto;        /* use the image’s intrinsic height */
+            max-width: 100%;     /* scale down if it’s wider than the column */
+            max-height: 50vh;    /* prevents it from getting too tall on big screens */
             border-radius: 0;
-            object-fit: cover;
+            object-fit: contain; /* don’t crop, just fit inside the box */
             box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
-            max-width: 60vh;
         }
         .hero-content {
             flex: 1;
