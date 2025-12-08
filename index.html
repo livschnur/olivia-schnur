@@ -148,9 +148,6 @@
         .profile-photo-wrapper {
             width: clamp(242px, 35vw, 352px);
             max-height: calc(100vh - 180px); /* gently scales with viewport while staying contained */
-            transform: scale(1.5);
-            transform-origin: center center;
-        }
         
         .profile-photo {
             display: block;
@@ -161,8 +158,9 @@
             object-fit: contain; /* no cropping */
             border-radius: 0;
             box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
-            transform: scale(1.5); /* scales the image by 1.5 */
-            transform-origin: center center; /* scales from the center */
+            transform: scale(1.5);
+            transform-origin: center center; /* keeps the image in place */
+    
         }
 
         .hero-feed {
