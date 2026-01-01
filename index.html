@@ -57,6 +57,31 @@
             pointer-events: none;
         }
 
+        /* Responsive ASCII art scaling - max scale is 3.8 */
+        @media (max-width: 1350px) {
+            body::before {
+                transform: translate(-50%, -50%) scale(2.8) scaleX(-1) scaleY(-1) rotate(113deg);
+            }
+        }
+
+        @media (max-width: 900px) {
+            body::before {
+                transform: translate(-50%, -50%) scale(2.0) scaleX(-1) scaleY(-1) rotate(113deg);
+            }
+        }
+
+        @media (max-width: 600px) {
+            body::before {
+                transform: translate(-50%, -50%) scale(1.5) scaleX(-1) scaleY(-1) rotate(113deg);
+            }
+        }
+
+        @media (max-width: 400px) {
+            body::before {
+                transform: translate(-50%, -50%) scale(1.2) scaleX(-1) scaleY(-1) rotate(113deg);
+            }
+        }
+
         .main-content {
             flex: 1;
             min-height: 0;
