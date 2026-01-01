@@ -52,9 +52,35 @@
             background-position: center;
             background-size: auto;
             opacity: 0.8;
-            transform: translate(-50%, -50%) scale(3.8) scaleX(-1) scaleY(-1) rotate(113deg);
+            --ascii-scale: 3.8;
+            transform: translate(-50%, -50%) scale(var(--ascii-scale)) scaleX(-1) scaleY(-1) rotate(113deg);
             z-index: -1;
             pointer-events: none;
+        }
+
+        /* Responsive ASCII art scaling - max scale is 3.8 */
+        @media (max-width: 1350px) {
+            body::before {
+                --ascii-scale: 2.8;
+            }
+        }
+
+        @media (max-width: 900px) {
+            body::before {
+                --ascii-scale: 2.0;
+            }
+        }
+
+        @media (max-width: 600px) {
+            body::before {
+                --ascii-scale: 1.5;
+            }
+        }
+
+        @media (max-width: 400px) {
+            body::before {
+                --ascii-scale: 1.2;
+            }
         }
 
         .main-content {
