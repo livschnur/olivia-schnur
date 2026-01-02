@@ -138,26 +138,25 @@
             z-index: 1;
         }
 
-        /* Two-Column Layout */
         .hero {
             display: flex;
-            gap: 3rem;
+            align-items: start;     
+            justify-content: center;
+            gap: 4rem;
             flex: 1;
             margin-top: 1.5rem;
             min-height: calc(100vh - 230px);
             position: relative;
-            align-items: center;
-            justify-content: center;
         }
 
-        /* Left Column: Fixed-width, vertically stacked */
-        .left-column {
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
-            flex-shrink: 0;
-            width: 820px;
-            align-items: flex-start;
+
+       .left-column {
+           display: flex;
+           flex-direction: column;
+           gap: 2rem;
+           width: 560px;      
+           flex: 0 0 auto;
+           align-items: flex-start;
         }
 
         .right-column {
@@ -169,6 +168,12 @@
             align-items: center;
             justify-content: center;
         }
+
+        .middle-column{
+            width: 640px;  
+            flex: 0 0 auto;
+        }
+
 
         .text-container {
             padding: 2rem;
