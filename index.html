@@ -154,7 +154,7 @@
            display: flex;
            flex-direction: column;
            gap: 2rem;
-           width: 700px;      
+           width: 560px;      
            flex: 0 0 auto;
            align-items: flex-start;
         }
@@ -189,6 +189,7 @@
             line-height: 1.9;
         }
 
+        /* Profile container with transparent background */
         .profile-container {
             background-color: transparent;
             padding: 3.5rem 5.5rem;
@@ -205,7 +206,7 @@
         }
         
         .profile-photo-wrapper {
-            width: min(700px, 100%);     
+            width: min(520px, 100%);     
             margin: 0 auto;           
         }
 
@@ -276,19 +277,20 @@
               gap: 2.5rem;
           }
 
-          .left-column {
+          .left-column,
+          .middle-column{
               width: 100%;
               max-width: 720px;
           }
 
-          .profile-photo-wrapper {
+          .profile-photo-wrapper{
               width: min(560px, 100%);
           }
       }
 
-        @media (max-width: 600px) {
+        @media (max-width: 600px){
             .profile-container{
-                padding: 1.5rem;   
+                padding: 1.5rem 1.5rem;   
                 gap: 1.5rem;              
 
             }
