@@ -82,6 +82,11 @@ body {
   transform: scaleX(1);
 }
 
+.site-nav a.active::after{
+    transform: scaleX(1);
+    opacity: 0.9
+}
+
 .main-content {
     flex: 1 0 auto;
 }
