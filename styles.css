@@ -22,7 +22,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: clamp(2.5rem, 4vw, 5rem);
+    gap: 4rem;
     margin: 0;
     padding: 0 2rem;
     width: 100%;
@@ -55,7 +55,7 @@ body {
     font-size: 2rem;
     transition: color 0.3s ease;
     position: relative;
-    letter-spacing: 0.2px;
+    letter-spacing: 0.05em;
 }
 
 .site-nav a::after{
