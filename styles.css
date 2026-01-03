@@ -29,9 +29,14 @@ body {
     max-width: 1100px;
 }
 
-/* Special positioning for home page with vertical text */
 .home-layout .site-nav {
     position: relative;
+}
+
+.vertical-name {
+    background-color: #fffaf0;
+    padding: 1rem 0;
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.08);
 }
 
 .home-layout .site-nav-list {
