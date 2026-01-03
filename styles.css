@@ -7,7 +7,7 @@ body {
 }
 
 .site-nav {
-    background-color: #fffaf0;
+    background-color: transparent;
     padding: 1.5rem 2rem;
     display: flex;
     justify-content: center;
