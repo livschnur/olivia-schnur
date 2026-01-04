@@ -33,11 +33,6 @@ body {
     position: relative;
 }
 
-.vertical-name {
-    background-color: transparent;
-    padding: 1rem 0;
-}
-
 .home-layout .site-nav-list {
     position: relative;
     width: 100%;
