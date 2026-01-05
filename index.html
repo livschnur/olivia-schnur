@@ -221,6 +221,19 @@
             width: 100%;
             height: auto;
         }
+
+        .schnur-name {
+            --x: 240px;
+            --y: -80px;
+            --scale: 1.1;
+            --rotate: -6deg;
+            
+        transform:
+            translate(var(--x), var(--y))
+            scale(var(--scale))
+            rotate(var(--rotate));
+        }
+
         /* Navigation buttons section */
         .hero-actions {
             display: flex;
