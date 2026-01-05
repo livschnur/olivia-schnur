@@ -208,52 +208,30 @@
             border: 1px solid rgba(0,0,0,0.10);
         }
         
-        .name-wrapper {
-            width: 520px;              /* base size */
-            max-width: none;
-            overflow: visible;
-            flex-shrink: 0;
-            transform-origin: center;
+        .name-wrapper{
             position: absolute;
+            width: 520px;
+            max-width: none;
             z-index: 5;
+            pointer-events: none; /* optional: prevents blocking clicks */
         }
-        
-        .name-wrapper img {
+
+        .name-wrapper img{
             display: block;
             width: 100%;
             height: auto;
         }
-        
-        .olivia-name {
-            --x: 200px;
-            --y: -120px;
-            --scale: 1.0;
-            --rotate: 4deg;
-            top: 20px;
-            right: 60px;
-            transform: rotate(4deg) scale(1.0);
-        }
-        
-        transform:
-            translate(var(--x), var(--y))
-            scale(var(--scale))
-            rotate(var(--rotate));
+
+        .olivia-name{
+            top: 70px;
+            left: 520px;
+            transform: rotate(-3deg) scale(1.15);
         }
 
-
-        .schnur-name {
-            --x: -200px;
-            --y: -80px;
-            --scale: 1.1;
-            --rotate: -6deg;
-            top: 40px;
-            right: 220px;
-            transform: rotate(-6deg) scale(1.05);
-            
-        transform:
-            translate(var(--x), var(--y))
-            scale(var(--scale))
-            rotate(var(--rotate));
+        .schnur-name{
+            top: 110px;
+            left: 670px;
+            transform: rotate(3deg) scale(1.05);
         }
 
         /* Navigation buttons section */
