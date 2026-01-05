@@ -207,7 +207,20 @@
             box-shadow: 0 14px 40px rgba(0,0,0,0.16);
             border: 1px solid rgba(0,0,0,0.10);
         }
-
+        
+        .name-wrapper {
+            width: 520px;              /* base size */
+            max-width: none;
+            overflow: visible;
+            flex-shrink: 0;
+            transform-origin: center;
+        }
+        
+        .name-wrapper img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
         /* Navigation buttons section */
         .hero-actions {
             display: flex;
