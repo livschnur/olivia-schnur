@@ -214,6 +214,8 @@
             overflow: visible;
             flex-shrink: 0;
             transform-origin: center;
+            position: absolute;
+            z-index: 5;
         }
         
         .name-wrapper img {
@@ -227,6 +229,10 @@
             --y: -120px;
             --scale: 1.0;
             --rotate: 4deg;
+            top: 20px;
+            right: 60px;
+            transform: rotate(4deg) scale(1.0);
+        }
         
         transform:
             translate(var(--x), var(--y))
@@ -240,6 +246,9 @@
             --y: -80px;
             --scale: 1.1;
             --rotate: -6deg;
+            top: 40px;
+            right: 220px;
+            transform: rotate(-6deg) scale(1.05);
             
         transform:
             translate(var(--x), var(--y))
@@ -379,6 +388,12 @@
 
     <main class="main-content">
         <div class="home-layout">
+            <div class="name-wrapper schnur-name">
+                <img src="schnur_name_print.png" alt="Schnur name treatment">
+            </div>
+            <div class="name-wrapper olivia-name">
+                <img src="olivia_printed_name.png" alt="Olivia name treatment">
+            </div>
             <div class="container">
                 <section class="hero">
                     <div class="left-column">
@@ -408,12 +423,6 @@
                             <div class="hero-photo">
                                 <div class="profile-photo-wrapper">
                                     <img src="picture of me.jpeg" alt="Portrait of Olivia Schnur" class="profile-photo">
-                                </div>
-                                <div class="name-wrapper schnur-name">
-                                    <img src="schnur_name_print.png" alt="Schnur name treatment">
-                                </div>
-                                <div class="name-wrapper olivia-name">
-                                    <img src="olivia_printed_name.png" alt="Olivia name treatment">
                                 </div>
                             </div>
                         </div>
