@@ -183,13 +183,14 @@
             align-items: flex-start;
             justify-content: flex-start;
         }
-
+        
        .profile-photo-wrapper {
-           width: clamp(520px, 45vw, 850px);        /* fixed size so it won't shrink */
-           max-width: none;       /* optional, since width is fixed */
+            --photo-scale: 1.2;
+           width: 850px;
+           max-width: none;       
            overflow: visible;
-           margin: 0;             /* stop fighting with huge margins */
-           transform: translate(700px, 300px) rotate(-6deg);
+           margin: 0;           
+           transform: translate(700px, 300px) rotate(-6deg) scale(var(--photo-scale));
            transform-origin: center;
         }
 
