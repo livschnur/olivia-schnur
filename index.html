@@ -148,13 +148,17 @@
         }
 
         .text-container {
-            background-color: #fffaf0;
+        --text-scale: 1;
+            width: 720px;                 /* base width */
+            max-width: none;
             padding: 2rem;
+            background-color: #fffaf0;
             border-radius: 10px;
             box-shadow: 0 18px 55px rgba(0,0,0,0.28);
             border: 1px solid rgba(0,0,0,0.1);
-            width: 100%;
-            margin-top: 12rem
+
+            transform: translate(0px, 0px) scale(var(--text-scale));
+            transform-origin: top left;
         }
 
         .text-container h2 {
@@ -277,8 +281,6 @@
         }
 
         @media (max-width: 1500px) {
-            .hero { 
-            }
             
             .left-column {
                 width: 100%;
