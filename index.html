@@ -221,6 +221,19 @@
             width: 100%;
             height: auto;
         }
+        
+        .olivia-name {
+            --x: -180px;
+            --y: -120px;
+            --scale: 1.0;
+            --rotate: 4deg;
+        
+        transform:
+            translate(var(--x), var(--y))
+            scale(var(--scale))
+            rotate(var(--rotate));
+        }
+
 
         .schnur-name {
             --x: 240px;
@@ -343,6 +356,13 @@
             .text-container {
                 padding: 1.5rem;
             }
+         
+            .name-wrapper {
+                width: 100%;
+                transform: none;
+                margin: 1rem 0;
+            }
+
 
         }
     </style>
