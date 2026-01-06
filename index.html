@@ -147,29 +147,24 @@
             justify-content: center;
         }
 
-        .text-container {
-        --text-scale: 1;
-           width: clamp(620px, 60vw, 950px);                /* base width */
-            max-width: none;
-            padding: 2rem;
-            background-color: #fffaf0;
-            border-radius: 10px;
-            box-shadow: 0 18px 55px rgba(0,0,0,0.28);
-            border: 1px solid rgba(0,0,0,0.1);
+       .text-container {
+           --text-x: -300px;
+           --text-y: 800px;
+           --text-scale: 1;
 
-            transform: translate(-300px, 800px) scale(var(--text-scale));
-            transform-origin: top left;
-        }
+           width: clamp(620px, 60vw, 950px);
+           max-width: none;
+           padding: 2rem;
 
-        .text-container h2 {
-            margin-top: 2rem;
-            margin-bottom: 1rem;
-            font-size: 4rem;
-        }
+           background-color: #fffaf0;
+           border-radius: 10px;
+           box-shadow: 0 18px 55px rgba(0,0,0,0.28);
+           border: 1px solid rgba(0,0,0,0.1);
 
-        .text-container p {
-            line-height: 1.8;
-        }
+           transform: translate(var(--text-x), var(--text-y)) scale(var(--text-scale));
+           transform-origin: top left;
+       }
+
 
         /* Profile container with transparent background */
         .profile-container {
@@ -263,43 +258,6 @@
             height: 600px;              /* or 152 for compact */
             border: 0;
         }
-        
-        /* Navigation buttons section */
-        .hero-actions {
-            display: flex;
-            align-items: flex-start;
-            justify-content: flex-start;
-            width: 100%;
-        }
-
-        .cta-links {
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            align-items: stretch;
-            gap: 1rem;
-            width: 100%;
-            height: 100%;
-        }
-
-        .cta-links a {
-            display: inline-block;
-            padding: 1.2rem 2.5rem;
-            background-color: #ffffff;
-            text-decoration: none;
-            border-radius: 6px;
-            border: 1px solid #000000;
-            transition: background-color 0.3s ease;
-            width: 100%;
-            text-align: center;
-            font-size: 1.3rem;
-        }
-
-        .cta-links a:hover {
-            background-color: #f0f0f0;
-        }
-
-
 
         footer {
             text-align: center;
@@ -317,10 +275,6 @@
         
         .bio{
             margin: 0;
-            padding-left: 1.3rem;
-        }
-
-        .bio li{ margin: 0.5rem 0;
         }
 
         .bio-paragraph {
@@ -421,7 +375,7 @@
                 <section class="hero">
                     <div class="left-column">
                         <div class="text-container">
-                           <p class="bio">
+                           <p class="bio-paragraph">
                                Hey! I'm Liv and I am a senior at Boston University, where I major in advertising  a minor in business administration. I have hands on experience with A&R scouting, talent strategy, and artist development. 
                            </p>
                         </div>
