@@ -234,6 +234,34 @@
             transform: translate(-50%, -50%) rotate(3deg) scale(1.55);
         }
 
+        .spotify-wrapper{
+            position: absolute;          /* makes it independent of columns */
+            z-index: 6;
+            width: 380px;               /* base size */
+            max-width: none;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 14px 40px rgba(0,0,0,0.18);
+
+            /* knobs */
+            --spotify-x: 55%;
+            --spotify-y: 78%;
+            --spotify-scale: 1.0;
+            --spotify-rotate: 0deg;
+            
+            left: var(--spotify-x);
+            top: var(--spotify-y);
+            transform: translate(-50%, -50%) scale(var(--spotify-scale)) rotate(var(--spotify-rotate));
+            transform-origin: center;
+        }
+
+        .spotify-wrapper iframe{
+            display: block;
+            width: 100%;
+            height: 352px;              /* or 152 for compact */
+            border: 0;
+        }
+        
         /* Navigation buttons section */
         .hero-actions {
             display: flex;
@@ -241,8 +269,6 @@
             justify-content: flex-start;
             width: 100%;
         }
-
-
 
         .cta-links {
             display: flex;
