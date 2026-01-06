@@ -164,7 +164,19 @@
            transform: translate(var(--text-x), var(--text-y)) scale(var(--text-scale));
            transform-origin: top left;
        }
-
+        
+        .sub-text {
+            margin-top: 1.5rem;
+            padding: 1.2rem 1.4rem;
+            font-size: 1.1rem;       /* smaller */
+            line-height: 1.7;
+            font-weight: 400;        /* lighter */
+            color: #444;
+            
+            background: rgba(0,0,0,0.03);  /* very subtle contrast */
+            border-left: 3px solid rgba(0,0,0,0.15);
+            border-radius: 6px;
+        }
 
         /* Profile container with transparent background */
         .profile-container {
@@ -375,6 +387,9 @@
                            <p class="bio-paragraph">
                                Hey! I'm Liv and I am a senior at Boston University, where I major in advertising  a minor in business administration. I have hands on experience with A&R scouting, talent strategy, and artist development. 
                            </p>
+                           <div class="sub-text">
+                               Previously worked with independent labels and touring artists, supporting release strategy, live bookings, and audience growth.
+                           </div>
                         </div>
                     </div>
                     <div class="right-column">
