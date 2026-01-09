@@ -23,7 +23,7 @@ body {
   margin: 0;
   font-family: "LilexNerdFont", Arial, sans-serif;
   color: #1f1f1f;
-  background: #efece6;
+  background: hotpink !important;
   overflow-x: hidden;
 }
 
