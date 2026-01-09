@@ -10,52 +10,79 @@
 <body>
   <a class="skip-link" href="#content">Skip to content</a>
 
-  <main id="content">
+ <main id="content">
 
-    <!-- =========================
-         SECTION 1: HERO (bio + spotify + photo)
-    ========================== -->
-    <section class="section hero" aria-label="Intro">
-      <div class="wrap hero-grid">
+  <!-- SECTION 1: COLLAGE (FIRST ON LOAD) -->
+  <section class="section stage collage-stage" aria-label="Navigation collage">
+    <div class="stage-inner">
 
-        <!-- Bio card -->
-        <article class="bio-card">
-          <p class="bio-lede">
-            Hey! I’m Liv, a senior at Boston University, majoring in Advertising and minoring in business administration.
-            I have hands-on experience with A&amp;R scouting, talent strategy, and artist development.
-          </p>
+      <img class="name-torn name-olivia" src="olivia_printed_name.png" alt="Olivia">
+      <img class="name-torn name-schnur" src="schnur_name_print.png" alt="Schnur">
 
-          <p class="bio-body">
-            I have developed and branded an internationally nominated radio program called “The Basement”.
-            It’s focused on spotlighting emerging talent through live sessions and interviews.
-            I have also interviewed nationally touring bands.
-          </p>
+      <nav class="icon-row" aria-label="Primary navigation">
+        <a class="icon-link" href="experience.html">
+          <img src="computer.png" alt="Experience">
+        </a>
+        <a class="icon-link" href="contact.html">
+          <img src="rotary phone.png" alt="Contact">
+        </a>
+        <a class="icon-link" href="portfolio.html">
+          <img src="thumb-drive.png" alt="Portfolio">
+        </a>
+      </nav>
 
-          <p class="bio-body muted">
-            I am very passionate about crafting an artist’s brand and place a lot of weight on the importance of an authentic
-            promotion. I love film, art, and obviously music, and one of the things that tie all mediums together is storytelling.
-            I am looking to utilize all of the skills I have learned or taught myself to build up artists.
-          </p>
-        </article>
+      <figure class="polaroid polaroid-collage">
+        <img src="picture of me.jpeg" alt="Olivia standing outdoors in front of arches">
+      </figure>
 
-        <!-- Right column: Spotify + photo -->
-        <div class="hero-right">
-          <div class="spotify-card" aria-label="Spotify playlist">
-            <iframe
-              src="https://open.spotify.com/embed/playlist/0Pz0qea4z0TUpZ30OPO5z1?utm_source=generator"
-              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-              loading="lazy"
-              title="Spotify playlist"
-            ></iframe>
-          </div>
+    </div>
+  </section>
 
-          <figure class="photo-polaroid" aria-label="Photo">
-            <img src="picture of me.jpeg" alt="Portrait of Olivia Schnur" />
-          </figure>
-        </div>
+  <!-- SECTION 2: HERO (SECOND ON SCROLL) -->
+  <section class="section stage hero-stage" aria-label="Intro">
+    <div class="stage-inner">
 
+      <article class="bio-card">
+        <p class="bio-lede">
+          Hey! I’m Liv, a senior at Boston University, majoring in Advertising and minoring in business administration.
+          I have hands-on experience with A&amp;R scouting, talent strategy, and artist development.
+        </p>
+
+        <p class="bio-body">
+          I have developed and branded an internationally nominated radio program called “The Basement”.
+          It’s focused on spotlighting emerging talent through live sessions and interviews.
+          I have also interviewed nationally touring bands.
+        </p>
+
+        <p class="bio-body muted">
+          I am very passionate about crafting an artist’s brand and place a lot of weight on the importance of an authentic
+          promotion. I love film, art, and obviously music, and one of the things that tie all mediums together is storytelling.
+          I am looking to utilize all of the skills I have learned or taught myself to build up artists.
+        </p>
+      </article>
+
+      <div class="spotify-card">
+        <iframe
+          src="https://open.spotify.com/embed/playlist/0Pz0qea4z0TUpZ30OPO5z1?utm_source=generator"
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          loading="lazy"
+          title="Spotify playlist"
+        ></iframe>
       </div>
-    </section>
+
+      <figure class="polaroid polaroid-hero">
+        <img src="picture of me.jpeg" alt="Polaroid portrait">
+      </figure>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p class="tagline">Aspiring Music Business Professional &amp; Student</p>
+</footer>
+
 
     <!-- =========================
          SECTION 2: COLLAGE (names + icons + polaroid)
