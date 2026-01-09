@@ -1,4 +1,14 @@
 /* ====== Full-screen stage ====== */
+html, body {
+  height: auto;
+  min-height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  margin: 0;
+}
+
+main { display: block; }
+
 .section.stage{
   min-height: 100svh;
   display: grid;
